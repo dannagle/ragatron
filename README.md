@@ -7,7 +7,7 @@ Ragatron is a Windows-only (for now) open source hacking tool for HTML5 games de
 **Ragatron is neither endorsed nor supported by Lost Decade Games. ** Use at your own risk! However, *you* can support Lost Decade Games by purchasing copies of their games to hack with this tool. ;-)
 
 
-## Downlod
+## Download
 
 Ragatron can be downloaded at  [Ragatron.com](http://ragatron.com/)
 
