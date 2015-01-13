@@ -21,6 +21,12 @@ The only supported build is Humble Bundle version 2014-10-06
 - Fast Quad Spear
 - Expose Developer Tools
 
+### Downlod
+
+Ragatron can be downloaded at  [Ragatron.com](http://ragatron.com/)
+
+
+
 ## Hacks for Lava Blade
 The only supported build is the version on Humble Bundle.
 
@@ -50,10 +56,6 @@ If you mess something up, just click "Unpack" again to undo your changes. Ragatr
 - [Qt 5.3](http://www.qt.io/) SDK. The tested versions are compiled using MinGW. Qt version 5.4 should work too.
 
 - [QuaZIP](http://quazip.sourceforge.net/) is needed to unpackage and repackage the game binaries. It is tricky to setup. Therefore, pre-compiled shared libraries (for Mac and Windows) are inside this repo (as well as the zip source). You will need to modify the ragatron.pro file to support your setup.
-
-### Web Site
-
-Official web site is [Ragatron.com](http://ragatron.com/)
 
 
 ### Todo
