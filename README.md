@@ -6,6 +6,13 @@ Ragatron is a Windows-only (for now) open source hacking tool for HTML5 games de
 
 **Ragatron is neither endorsed nor supported by Lost Decade Games. ** Use at your own risk! However, *you* can support Lost Decade Games by purchasing copies of their games to hack with this tool. ;-)
 
+
+## Downlod
+
+Ragatron can be downloaded at  [Ragatron.com](http://ragatron.com/)
+
+
+
 ## Hacks for A Wizard's Lizard
 The only supported build is Humble Bundle version 2014-10-06
 
@@ -20,11 +27,6 @@ The only supported build is Humble Bundle version 2014-10-06
 - Fast Skyrocket
 - Fast Quad Spear
 - Expose Developer Tools
-
-### Downlod
-
-Ragatron can be downloaded at  [Ragatron.com](http://ragatron.com/)
-
 
 
 ## Hacks for Lava Blade
