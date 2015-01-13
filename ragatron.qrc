@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>dannagle_logo.png</file>
+        <file>dannagle_logo.ico</file>
+        <file>Ragatron_instructions.txt</file>
+        <file>dannagle.png</file>
+        <file>ragatron.css</file>
+    </qresource>
+</RCC>

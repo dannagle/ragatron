@@ -1,0 +1,11 @@
+QMainWindow
+{
+    background-color:#EEEEEE;
+}
+
+
+QStatusBar {
+
+    color:#14480D;
+    background-color:white;
+}
