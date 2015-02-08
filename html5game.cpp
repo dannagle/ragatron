@@ -12,9 +12,10 @@ It is licensed GPL v2 or later.
 #include <QFile>
 
 
-#include <quazip.h>
-#include <quazipfile.h>
-#include <JlCompress.h>
+#include "quazip/quazip.h"
+#include "quazip/quazipfile.h"
+#include "quazip/JlCompress.h"
+
 
 
 #include "html5game.h"

@@ -5,20 +5,55 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT += xml
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = ragatron
 TEMPLATE = app
 
+DEFINES +=QUAZIP_STATIC="1"
+
+macx:LIBS += -lz
+
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    html5game.cpp
+    html5game.cpp \
+    quazip/JlCompress.cpp \
+    quazip/qioapi.cpp \
+    quazip/quaadler32.cpp \
+    quazip/quacrc32.cpp \
+    quazip/quagzipfile.cpp \
+    quazip/quaziodevice.cpp \
+    quazip/quazip.cpp \
+    quazip/quazipdir.cpp \
+    quazip/quazipfile.cpp \
+    quazip/quazipfileinfo.cpp \
+    quazip/quazipnewinfo.cpp \
+    quazip/unzip.c \
+    quazip/zip.c
 
 HEADERS  += mainwindow.h \
     globals.h \
-    html5game.h
+    html5game.h \
+    quazip/crypt.h \
+    quazip/ioapi.h \
+    quazip/JlCompress.h \
+    quazip/quaadler32.h \
+    quazip/quachecksum32.h \
+    quazip/quacrc32.h \
+    quazip/quagzipfile.h \
+    quazip/quaziodevice.h \
+    quazip/quazip.h \
+    quazip/quazip_global.h \
+    quazip/quazipdir.h \
+    quazip/quazipfile.h \
+    quazip/quazipfileinfo.h \
+    quazip/quazipnewinfo.h \
+    quazip/unzip.h \
+    quazip/zip.h
 
 FORMS    += mainwindow.ui
 
@@ -29,16 +64,3 @@ OTHER_FILES += \
 
 RESOURCES += \
     ragatron.qrc
-
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../build-quazip-Desktop_Qt_5_3_MinGW_32bit-Release/quazip/release/ -lquazip
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../build-quazip-Desktop_Qt_5_3_MinGW_32bit-Release/quazip/debug/ -lquazip
-
-win32:INCLUDEPATH += $$PWD/../quazip-0.7/quazip
-win32:DEPENDPATH += $$PWD/../quazip-0.7/quazip
-
-
-#LIBS += /path/to/your/lib -lquazip
-
-macx:INCLUDEPATH += /Users/dannagle/quazip-0.7/quazip
-macx:DEPENDPATH += /Users/dannagle/quazip-0.7/quazip
-macx: LIBS += /Users/dannagle/build-quazip-Desktop_Qt_5_3_0_clang_64bit-Release/quazip

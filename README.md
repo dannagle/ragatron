@@ -1,10 +1,14 @@
 # Ragatron
 
+"*It is like Game Genie for Lost Decade Games!*" - Matt Hackett, co-founder of Lost Decade Games.
+
 Ragatron is a Windows-only (for now) open source hacking tool for HTML5 games developed by [Lost Decade Games](http://www.lostdecadegames.com). It specifically targets [A Wizard's Lizard](http://www.wizardslizard.com) and [Lava Blade](http://www.lavablade.com).
 
-![AWL hack screenshot](hacked_awl_crop.jpg)
+![AWL hack screenshot](githubscreenshots/hacked_awl_crop.jpg)
 
-**Ragatron is neither endorsed nor supported by Lost Decade Games. ** Use at your own risk! However, *you* can support Lost Decade Games by purchasing copies of their games to hack with this tool. ;-)
+
+This project is not officially supported by Lost Decade Games. However, ** *you* ** can officially support Lost Decade Games by purchasing (multiple!) copies of their games to hack with this tool! ;-)
+
 
 
 ## Download
@@ -14,9 +18,9 @@ Ragatron can be downloaded at  [Ragatron.com](http://ragatron.com/)
 
 
 ## Hacks for A Wizard's Lizard
-The only supported build is Humble Bundle version 2014-10-06
+The only supported build is Humble Bundle version **2015-02-05**
 
-![Ragatron AWL hack](ragatron_screenshot_awl.png)
+![Ragatron AWL hack](githubscreenshots/ragatron_screenshot_awl.png)
 
 - Start with 1 million gold
 - Start with 5,000 health
@@ -32,7 +36,7 @@ The only supported build is Humble Bundle version 2014-10-06
 ## Hacks for Lava Blade
 The only supported build is the version on Humble Bundle.
 
-![Ragatron Lava Blade hack](ragatron_screenshot_lavablade.png)
+![Ragatron Lava Blade hack](githubscreenshots/ragatron_screenshot_lavablade.png)
 
 - Healing at camp costs 1 gold
 - Lars has extra movement
@@ -55,9 +59,9 @@ If you mess something up, just click "Unpack" again to undo your changes. Ragatr
 
 ### Dependencies
 
-- [Qt 5.3](http://www.qt.io/) SDK. The tested versions are compiled using MinGW. Qt version 5.4 should work too.
+- [Qt 5.4](http://www.qt.io/) SDK. The tested versions are compiled using MinGW bundled with Qt.
 
-- [QuaZIP](http://quazip.sourceforge.net/) is needed to unpackage and repackage the game binaries. It is tricky to setup. Therefore, pre-compiled shared libraries (for Mac and Windows) are inside this repo (as well as the zip source). You will need to modify the ragatron.pro file to support your setup.
+- [QuaZIP](http://quazip.sourceforge.net/) is licensed LGPL v2 and now statically built from within the project. There is no need to download this library.
 
 
 ### Todo

@@ -20,6 +20,6 @@ If you mess something up, just click "Unpack" again to undo your changes.
 
 
 Ragatron was developed by Dan Nagle:
+http://Ragatron.com/
 https://Twitter.com/NagleCode
 https://DanNagle.com/
-http://forum.lostdecadegames.com/user/dannagle

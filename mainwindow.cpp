@@ -19,9 +19,10 @@ It is licensed GPL v2 or later.
 #include <QDate>
 
 
-#include <quazip.h>
-#include <quazipfile.h>
-#include <JlCompress.h>
+#include "quazip/quazip.h"
+#include "quazip/quazipfile.h"
+#include "quazip/JlCompress.h"
+
 
 
 #define SETTINGSCHECK(var) settings.setValue( # var , ui-> var ->isChecked())
@@ -93,6 +94,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     setWindowTitle("Ragatron: Modding Lost Decade Games");
+    setWindowIcon(QIcon(RAGATRONLOGO));
 
 
     ui->wizardlizardPathEdit->setReadOnly(true);
