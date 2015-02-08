@@ -18,6 +18,9 @@ DEFINES +=QUAZIP_STATIC="1"
 macx:LIBS += -lz
 
 
+win32:RC_FILE = ragatronicon.rc
+
+
 SOURCES += main.cpp\
         mainwindow.cpp \
     html5game.cpp \
@@ -64,3 +67,5 @@ OTHER_FILES += \
 
 RESOURCES += \
     ragatron.qrc
+
+
