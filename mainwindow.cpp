@@ -612,8 +612,8 @@ void MainWindow::on_repackButton_clicked()
         }
         SETTINGSCHECK(startwith1millionCheck);
         if(ui->startwith1millionCheck->isChecked()) {
-            indexString.replace("getStartingGold:function(){var e=this.get(\"hostages\",0);return p+e*p}",
-                                "getStartingGold:function(){var e=this.get(\"hostages\",0);return 1000000+e*p}");
+            indexString.replace("getStartingGold:function(){var e=this.get(\"hostages\",0);return d+e*d}",
+                                "getStartingGold:function(){var e=this.get(\"hostages\",0);return 1000000+d+e*d}");
         }
         SETTINGSCHECK(startwith5000orbsCheck);
         if(ui->startwith5000orbsCheck->isChecked()) {
