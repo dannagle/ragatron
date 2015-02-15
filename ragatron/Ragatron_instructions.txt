@@ -19,8 +19,9 @@ are available through the Ragatron interface. It will drop in your cheats at the
 If you mess something up, just click "Unpack" again to undo your changes.
 
 
-Ragatron is Open Source and was developed by Dan Nagle:
-http://Ragatron.com/
+Ragatron was developed by Dan Nagle:
 https://Twitter.com/NagleCode
 https://DanNagle.com/
+
+Ragatron is Open Source!
 https://github.com/dannagle/ragatron

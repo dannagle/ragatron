@@ -4,13 +4,11 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
-QT += xml
-
+QT += core gui xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = ragatron
+TARGET = Ragatron
 TEMPLATE = app
 
 DEFINES +=QUAZIP_STATIC="1"
@@ -18,12 +16,17 @@ DEFINES +=QUAZIP_STATIC="1"
 macx:LIBS += -lz
 
 
-win32:RC_FILE = ragatronicon.rc
+macx:ICON = ragatron/dannagle_logo.icns
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    html5game.cpp \
+win32:RC_FILE = ragatron/ragatronicon.rc
+
+
+
+
+SOURCES += ragatron/main.cpp\
+        ragatron/mainwindow.cpp \
+    ragatron/html5game.cpp \
     quazip/JlCompress.cpp \
     quazip/qioapi.cpp \
     quazip/quaadler32.cpp \
@@ -36,11 +39,12 @@ SOURCES += main.cpp\
     quazip/quazipfileinfo.cpp \
     quazip/quazipnewinfo.cpp \
     quazip/unzip.c \
-    quazip/zip.c
+    quazip/zip.c \
+    ragatron/cheatui.cpp
 
-HEADERS  += mainwindow.h \
-    globals.h \
-    html5game.h \
+HEADERS  += ragatron/mainwindow.h \
+    ragatron/globals.h \
+    ragatron/html5game.h \
     quazip/crypt.h \
     quazip/ioapi.h \
     quazip/JlCompress.h \
@@ -56,16 +60,18 @@ HEADERS  += mainwindow.h \
     quazip/quazipfileinfo.h \
     quazip/quazipnewinfo.h \
     quazip/unzip.h \
-    quazip/zip.h
+    quazip/zip.h \
+    ragatron/cheatui.h \
+    ragatron/hackstruct.h
 
-FORMS    += mainwindow.ui
+FORMS    += ragatron/mainwindow.ui \
+    ragatron/cheatui.ui
 
 OTHER_FILES += \
-    ragatronicon.rc \
-    ragatron.css \
-    Ragatron_instructions.txt
+    ragatron/ragatronicon.rc \
+    ragatron/ragatron.css \
+    ragatron/Ragatron_instructions.txt
 
 RESOURCES += \
-    ragatron.qrc
-
+    ragatron/ragatron.qrc
 

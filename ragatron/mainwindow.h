@@ -27,41 +27,31 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    static QString byteArrayToHex(QByteArray data);
 
     QString hyperLinkStyle;
     QString validChoiceStyle;
 
     QPushButton *generateDNLink();
 
-    HTML5Game WizardsLizard;
-    HTML5Game LavaBlade;
-    bool successfulUnpackWL;
-    bool successfulUnpackLB;
+
+    QList<HTML5Game *> html5GameList;
 
     void statusBarMessage(const QString &msg, int timeout = 3000, bool override = false);
+    void gameButtonChecks(HTML5Game *game);
+public slots:
+    void html5Unpack(xml_t xml);
+    void html5Pack(xml_t xml);
 private slots:
-    void on_wizardpathButton_clicked();
+
+    void gotoDanNagleTwitter();
+    void gotoRagatron();
+    void on_launchUnpackFolderButton_clicked();
+
 
     void on_unpackPathButton_clicked();
 
-    void on_unpackButton_clicked();
-
-    void on_repackButton_clicked();
-    void gotoDanNagleTwitter();
-    void gotoRagatron();
-
-    void on_launchUnpackFolderButton_clicked();
-
-    void on_lavabladepathButton_clicked();
-
-    void on_repackButtonLavaBlade_clicked();
-
-    void on_unpackLavaBladeButton_clicked();
-
 private:
     Ui::MainWindow *ui;
-    bool copySupportFiles(QString path, HTML5Game *h5game);
 };
 
 #endif // MAINWINDOW_H

@@ -14,6 +14,8 @@ It is licensed GPL v2 or later.
 #include <QDebug>
 #include <QDir>
 #include "globals.h"
+#include "cheatui.h"
+#include "hackstruct.h"
 
 class HTML5Game : public QObject
 {
@@ -21,31 +23,32 @@ class HTML5Game : public QObject
 public:
     explicit HTML5Game(QObject *parent = 0);
 
+    xml_t xml;
 
-    QString pathString;
     QByteArray gameByteArray;
     QByteArray packageJSONByteArray;
     QByteArray indexHTMLByteArray;
     QByteArray nwEXEByteArray;
     QByteArray appNWByteArray;
-    QString gameMD5;
-    QString appNW;
-    QString nwEXE;
-    QStringList gameFileList;
-    QStringList zipFileList;
     quint64 exeBYTELocation;
-    QString repackName;
-    QString exeNameOriginal;
+
     QString packPath;
+    QString unpackPath;
     QString indexHTMLBackup;
     QString packageJSONBackup;
+    QString backupPath;
 
+    QString titleClean();
 
     bool isEXEValid();
-    bool hasBackup();
-    bool extractEXE();
-    bool saveBackup(QString path);
-    bool canUnpack();
+    bool canRepack();
+    bool scanXML(QString xmlFile);
+    bool unpack();
+    bool repack();
+
+
+    CheatUI * cheatTab;
+
 signals:
 
 public slots:
