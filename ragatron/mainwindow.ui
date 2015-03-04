@@ -56,7 +56,7 @@
        <string notr="true">color:rgb(170, 0, 0);font-weight:bold;</string>
       </property>
       <property name="text">
-       <string>This app is not affiliated nor supported by Lost Decade Games</string>
+       <string>Ragatron is not affiliated nor supported by the creators of these games.</string>
       </property>
      </widget>
     </item>

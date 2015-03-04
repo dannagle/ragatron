@@ -1,0 +1,70 @@
+<xml>
+    <title>Game Dev Tycoon</title>
+    <windows>
+        <defaultpath>C:/Program Files (x86)/Game Dev Tycoon</defaultpath>
+        <md5>28318991663312f02d61c01d4045d5e3</md5>
+        <app_nw_is_compressed>0</app_nw_is_compressed>
+        <app_nw_is_hidden>0</app_nw_is_hidden>
+        <app_nw_bytelocation>0</app_nw_bytelocation>
+        <target>GameDevTycoon.exe</target>
+        <outputname>GameDevTycoon.exe</outputname>
+        <launchfile>defaultBrowser.html</launchfile>
+    </windows>
+    <mac>
+        <defaultpath>/Applications/Game Dev Tycoon.app</defaultpath>
+        <md5>1115769f23498c3affab3da0f39837f9</md5>
+        <app_nw_is_compressed>0</app_nw_is_compressed>
+        <app_nw_is_hidden>0</app_nw_is_hidden>
+        <app_nw_bytelocation>0</app_nw_bytelocation>
+        <target>Contents/Resources/app.nw/compressed/codeNw.js</target>
+        <outputname>Contents/Resources/app.nw/compressed/codeNw.js</outputname>
+        <launchfile>defaultBrowser.html</launchfile>
+    </mac>
+    <linux>
+    </linux>
+    <hack>
+        <category>GDT</category>
+        <platform>all</platform>
+        <id>contractsPayMore</id>
+        <name>Contracts pay 100x</name>
+        <target>compressed/codeNw.js</target>
+        <search>.localize().format(UI.getShortNumberString(a.payment)),weeksUntilFired:0.2});b.adjustCash(a.payment,"contract payment".localize("heading"))</search>
+        <replace>.localize().format(UI.getShortNumberString(a.payment)),weeksUntilFired:0.2});b.adjustCash(a.payment*100,"contract payment".localize("heading"))</replace>
+    </hack>
+    <hack>
+        <category>GDT</category>
+        <platform>all</platform>
+        <id>fasterResearchPoints</id>
+        <name>Research Points grow much faster</name>
+        <target>compressed/codeNw.js</target>
+        <search>===c?GameManager.company.researchPoints+=a:</search>
+        <replace>===c?GameManager.company.researchPoints+=(a+3):</replace>
+    </hack>
+    <hack>
+    <category>GDT</category>
+        <platform>all</platform>
+        <id>cheapLargeE3</id>
+        <name>Large G3 Booth is cheap</name>
+        <target>compressed/codeNw.js</target>
+        <search>the main hall of the G3. We can expect a large number of visitors.".localize(),15E5</search>
+        <replace>the main hall of the G3. We can expect a large number of visitors.".localize(),15E2</replace>
+    </hack>
+    <hack>
+        <category>Advanced</category>
+        <platform>all</platform>
+        <id>enableDeveloperCheck</id>
+        <name>Expose Developer Tools (Use Caution)</name>
+        <target>package.json</target>
+        <search>"toolbar":false,</search>
+        <replace>"toolbar":true,</replace>
+    </hack>
+    <hack>
+        <category>Advanced</category>
+        <platform>all</platform>
+        <id>stopFullScreen</id>
+        <name>Not Full Screen</name>
+        <target>package.json</target>
+        <search>"fullscreen":true,</search>
+        <replace>"fullscreen":false,</replace>
+    </hack>
+</xml>

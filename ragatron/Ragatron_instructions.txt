@@ -6,17 +6,18 @@ http://www.wizardslizard.com/
 Buy Lava Blade here:
 http://www.lavablade.com/
 
-Ragatron will not work without a valid copy from Humble Bundle!
+Buy Game Dev Tycoon here:
+http://www.greenheartgames.com/app/game-dev-tycoon/
 
+
+Ragatron will not work without a valid copy from Humble Bundle!
 
 
 Welcome to Ragatron!
 
 
 Make your media edits here. DO NOT MOVE ANY FILES! Instead, directly edit the original files.  All the super-critical files have been secured. If you would like to cheat in the game, those
-are available through the Ragatron interface. It will drop in your cheats at the last minute from its own secure copy of the game.
-
-If you mess something up, just click "Unpack" again to undo your changes.
+are available through the Ragatron interface. If you mess something up, just click "Unpack" again to undo your changes.
 
 
 Ragatron was developed by Dan Nagle:
@@ -25,3 +26,6 @@ https://DanNagle.com/
 
 Ragatron is Open Source!
 https://github.com/dannagle/ragatron
+
+
+Got an HTML5 game that needs hacking? Let me know!

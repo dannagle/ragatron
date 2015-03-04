@@ -21,6 +21,7 @@ typedef struct xml {
     QString app_nw_bytelocation;
     QString target;
     QString outputname;
+    QString launchfile;
     QList<hack_t> hacks;
 } xml_t;
 

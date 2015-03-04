@@ -89,7 +89,7 @@ static bool rmDir(const QString &dirPath)
 static bool cpDir(const QString &srcPath, const QString &dstPath)
 {
 
-    QDEBUG() << srcPath << dstPath;
+    //QDEBUG() << srcPath << dstPath;
 
     //rmDir(dstPath);
     QDir parentDstDir(QFileInfo(dstPath).path());
@@ -176,6 +176,7 @@ bool HTML5Game::scanXML(QString xmlFile) {
     QDomElement docElem = xmlDoc.documentElement();
     xml.title = grabXMLData(docElem, "title");
 
+
     QDomNodeList dList = docElem.elementsByTagName(platform);
     if(dList.count() > 0) {
         QDomElement e = dList.at(0).toElement();
@@ -186,8 +187,15 @@ bool HTML5Game::scanXML(QString xmlFile) {
         GRABXML(app_nw_bytelocation);
         GRABXML(target);
         GRABXML(outputname);
+        GRABXML(launchfile);
     }
 
+    QDEBUGVAR(xml.launchfile);
+
+
+    if(xml.launchfile.isEmpty()) {
+        xml.launchfile = "index.html";
+    }
 
     dList = docElem.elementsByTagName("hack");
 
@@ -308,10 +316,25 @@ bool HTML5Game::canRepack()
         indexHTMLByteArray = readFile(indexHTMLBackup);
     }
 
+    if(!QFile(unpackPath).exists()) {
+        QDEBUGVAR(unpackPath);
+        return false;
+    }
+
     QDEBUGVAR(packageJSONBackup);
     QDEBUGVAR(indexHTMLBackup);
 
     QDEBUGVAR(gameByteArray.size());
+
+
+    if(!xml.app_nw_is_hidden) {
+        nwEXEByteArray.append(1);
+    }
+
+    if(!xml.app_nw_is_compressed) {
+        appNWByteArray.append(1);
+    }
+
     QDEBUGVAR(nwEXEByteArray.size());
     QDEBUGVAR(appNWByteArray.size());
     QDEBUGVAR(packageJSONByteArray.size());
@@ -355,13 +378,13 @@ bool HTML5Game::unpack() {
                  JlCompress::extractFiles(zipFile, zipFileList, unpackPath);
                  deletefile(zipFile);
                  packageJSONByteArray = readFile(unpackPath + "/package.json");
-                 indexHTMLByteArray = readFile(unpackPath + "/index.html");
+                 indexHTMLByteArray = readFile(unpackPath + "/" + xml.launchfile);
 
                  QFile::copy(unpackPath + "/package.json",  packageJSONBackup);
-                 QFile::copy(unpackPath + "/index.html", indexHTMLBackup);
+                 QFile::copy(unpackPath + "/" + xml.launchfile, indexHTMLBackup);
 
                  deletefile(unpackPath + "/package.json");
-                 deletefile(unpackPath + "/index.html");
+                 deletefile(unpackPath + "/" + xml.launchfile);
 
                  QDEBUGVAR(packageJSONByteArray.size());
                  QDEBUGVAR(indexHTMLByteArray.size());
@@ -372,6 +395,27 @@ bool HTML5Game::unpack() {
              } else {
                  return false;
              }
+
+        } else {
+            QDEBUG() << "App is not compresssed. Just copy everything over...";
+
+#ifdef __APPLE__
+            cpDir(backupPath + "/Contents/Resources/app.nw/", unpackPath);
+#else
+            cpDir(backupPath + "/", unpackPath);
+#endif
+            QFile::copy(":Ragatron_instructions.txt", unpackPath + "/Ragatron_instructions.txt");
+            QFile::copy(unpackPath + "/package.json",  packageJSONBackup);
+            QFile::copy(unpackPath + "/" + xml.launchfile, indexHTMLBackup);
+            packageJSONByteArray = readFile(packageJSONBackup);
+            indexHTMLByteArray = readFile(indexHTMLBackup);
+
+
+            //append dummy variables so isEmpty() checks are ok...
+            nwEXEByteArray.append("a");
+            appNWByteArray.append("a");
+
+            return true;
 
         }
     } else {
@@ -391,6 +435,8 @@ bool HTML5Game::repack()
     rmDir(packPath);
     QDir mpath;
     mpath.mkdir(packPath);
+    QHash<QString, QByteArray> otherFiles;
+    otherFiles.clear();
 
     if(packageJSONByteArray.size() > 0 && indexHTMLByteArray.size() > 0) {
         QDEBUG() << "We are unpacked. I can do this";
@@ -402,15 +448,42 @@ bool HTML5Game::repack()
                 QDEBUG() << "Hack" <<gameHack.name  << gameHack.search << gameHack.replace;
                 if(gameHack.target == "package.json") {
                     packageJSONString.replace(gameHack.search, gameHack.replace);
-                }
-                if(gameHack.target == "index.html") {
+                } else if(gameHack.target == xml.launchfile) {
                     indexHTMLString.replace(gameHack.search, gameHack.replace);
+                } else {
+
+
+#if __APPLE__
+                    //read from the backup once
+                if(otherFiles[unpackPath + "" + gameHack.target].isEmpty()) {
+                    otherFiles[unpackPath + "/" + gameHack.target] = readFile(backupPath + "/Contents/Resources/app.nw/" + gameHack.target);
+                }
+
+#else
+                    //read from the backup once
+                if(otherFiles[unpackPath + "/" + gameHack.target].isEmpty()) {
+                    otherFiles[unpackPath + "/" + gameHack.target] = readFile(backupPath + "/" + gameHack.target);
+                }
+
+#endif
+
+                QByteArray otherFileByteArray = otherFiles[unpackPath + "/" + gameHack.target];
+                    QString otherFileString(otherFileByteArray);
+                    otherFileString.replace(gameHack.search, gameHack.replace);
+                    QFile otherFile(unpackPath + "/" + gameHack.target);
+                    if(otherFile.open(QIODevice::WriteOnly)) {
+                        otherFile.write(otherFileString.toLatin1());
+                        otherFile.close();
+                    } else {
+                        QDEBUG() << "failed to open File!" << unpackPath + "/" + gameHack.target;
+                        return false;
+                    }
                 }
             }
         }
 
         QFile packageJSON(unpackPath + "/package.json");
-        QFile indexHTML(unpackPath + "/index.html");
+        QFile indexHTML(unpackPath + "/" + xml.launchfile);
 
         if(packageJSON.open(QIODevice::WriteOnly)) {
             packageJSON.write(packageJSONString.toLatin1());
@@ -432,35 +505,54 @@ bool HTML5Game::repack()
 
         QDEBUGVAR(backupPath);
         QDEBUGVAR(packPath);
+
         if(!cpDir(backupPath, packPath)) {
             QDEBUG() <<"Could not recursive copy" << backupPath <<"to" << packPath;
             return false;
         }
+        if(xml.app_nw_is_compressed) {
 
+            JlCompress::compressDir(packPath + "/app.nw", unpackPath);
+            if(xml.app_nw_is_hidden) {
 
-        JlCompress::compressDir(packPath + "/app.nw", unpackPath);
+                QByteArray appNWByteArrayFinal = readFile(packPath + "/app.nw");
+                deletefile(packPath + "/" + xml.target);
+                deletefile(packPath + "/app.nw");
 
-        if(xml.app_nw_is_hidden) {
+                QFile finalTarget(packPath + "/"+xml.outputname);
 
-            QByteArray appNWByteArrayFinal = readFile(packPath + "/app.nw");
-            deletefile(packPath + "/" + xml.target);
-            deletefile(packPath + "/app.nw");
-
-            QFile finalTarget(packPath + "/"+xml.outputname);
-
-            if(finalTarget.open(QIODevice::WriteOnly)) {
-                finalTarget.write(nwEXEByteArray);
-                finalTarget.write(appNWByteArrayFinal);
-                finalTarget.close();
+                if(finalTarget.open(QIODevice::WriteOnly)) {
+                    finalTarget.write(nwEXEByteArray);
+                    finalTarget.write(appNWByteArrayFinal);
+                    finalTarget.close();
+                } else {
+                    QDEBUG() << "failed to open indexHTML";
+                    return false;
+                }
             } else {
-                QDEBUG() << "failed to open indexHTML";
-                return false;
+                //moved packed file to the correct place.
+                deletefile(packPath + "/" + xml.target);
+                QFile::rename(packPath + "/app.nw", packPath + "/" + xml.target);
             }
         } else {
-            //moved packed file to the correct place.
-            deletefile(packPath + "/" + xml.target);
-            QFile::rename(packPath + "/app.nw", packPath + "/" + xml.target);
+
+            //No compression. Just need to copy over modded files.
+            QDir nwpath;
+
+#ifdef __APPLE__
+            rmDir(packPath + "/Contents/Resources/app.nw/");
+            nwpath.mkpath(packPath + "/Contents/Resources/app.nw/");
+            cpDir(unpackPath, packPath + "/Contents/Resources/app.nw/");
+#else
+            rmDir(packPath);
+            nwpath.mkpath(packPath);
+            cpDir(unpackPath, packPath);
+
+#endif
+
         }
+
+
 
         deletefile(packPath + "/index.html.backup");
         deletefile(packPath + "/package.json.backup");

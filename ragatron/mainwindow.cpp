@@ -66,7 +66,7 @@ MainWindow::MainWindow(QWidget *parent) :
     statusBarMessage("Version " + vDate.toString("yyyy-MM-dd"));
 
 
-    setWindowTitle("Ragatron: Modding Lost Decade Games");
+    setWindowTitle("Ragatron: Hacking HTML5 Games");
 
     this->setWindowIcon(QIcon(RAGATRONLOGO));
 
@@ -150,6 +150,13 @@ MainWindow::MainWindow(QWidget *parent) :
             html5GameList.append(lavabladeHTML5);
         }
 
+        HTML5Game * gamedevTycoonHTML5 = new HTML5Game();
+        html5GameList.append(gamedevTycoonHTML5);
+        scansuccess = gamedevTycoonHTML5->scanXML(":/cheats/gamedevtycoon.xml");
+        if(scansuccess) {
+            html5GameList.append(gamedevTycoonHTML5);
+        }
+
     }
 
     if(html5GameList.isEmpty()) {
@@ -173,6 +180,9 @@ MainWindow::MainWindow(QWidget *parent) :
                 this, SLOT(html5Pack(xml_t)));
 
         ui->gameChoiceTabs->addTab(cheattab, game->xml.title);
+
+        game->unpackPath = ui->unpackPathEdt->text() + game->titleClean();
+
 
         gameButtonChecks(game);
     }

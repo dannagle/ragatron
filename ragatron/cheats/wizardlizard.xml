@@ -8,6 +8,7 @@
         <app_nw_bytelocation>39433216</app_nw_bytelocation>
         <target>wizardslizard.exe</target>
         <outputname>AWizardsLizardHacked.exe</outputname>
+        <launchfile>index.html</launchfile>
     </windows>
     <mac>
         <defaultpath>/Applications/A Wizard's Lizard.app</defaultpath>
@@ -17,6 +18,7 @@
         <app_nw_bytelocation>0</app_nw_bytelocation>
         <target>Contents/Resources/app.nw</target>
         <outputname>Contents/Resources/app.nw</outputname>
+        <launchfile>index.html</launchfile>
     </mac>
     <linux>
     </linux>

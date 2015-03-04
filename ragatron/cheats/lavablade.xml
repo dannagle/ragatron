@@ -9,6 +9,8 @@
         <app_nw_bytelocation>36440576</app_nw_bytelocation>
         <target>lavablade.exe</target>
         <outputname>LavaBladeHacked.exe</outputname>
+        <launchfile>index.html</launchfile>
+
     </windows>
     <mac>
         <defaultpath>/Applications/Lava Blade.app/</defaultpath>
@@ -18,6 +20,7 @@
         <app_nw_bytelocation>0</app_nw_bytelocation>
         <target>Contents/Resources/app.nw</target>
         <outputname>Contents/Resources/app.nw</outputname>
+        <launchfile>index.html</launchfile>
     </mac>
     <linux>
     </linux>
