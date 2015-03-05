@@ -430,8 +430,10 @@ bool HTML5Game::repack()
 {
     QSettings settings(SETTINGSFILE, QSettings::IniFormat);
 
+
     hack_t gameHack;
 
+    QDEBUGVAR(packPath);
     rmDir(packPath);
     QDir mpath;
     mpath.mkdir(packPath);
@@ -445,7 +447,7 @@ bool HTML5Game::repack()
 
         foreach(gameHack, xml.hacks) {
             if(settings.value(gameHack.id).toBool()) {
-                QDEBUG() << "Hack" <<gameHack.name  << gameHack.search << gameHack.replace;
+                //QDEBUG() << "Hack" <<gameHack.name  << gameHack.search << gameHack.replace;
                 if(gameHack.target == "package.json") {
                     packageJSONString.replace(gameHack.search, gameHack.replace);
                 } else if(gameHack.target == xml.launchfile) {
@@ -453,24 +455,28 @@ bool HTML5Game::repack()
                 } else {
 
 
+                    QString otherFilesPath = unpackPath + "/" + gameHack.target;
+
 #if __APPLE__
                     //read from the backup once
-                if(otherFiles[unpackPath + "" + gameHack.target].isEmpty()) {
-                    otherFiles[unpackPath + "/" + gameHack.target] = readFile(backupPath + "/Contents/Resources/app.nw/" + gameHack.target);
+                if(otherFiles[otherFilesPath].isEmpty()) {
+                    QDEBUGVAR(backupPath + "/Contents/Resources/app.nw/" + gameHack.target);
+                    otherFiles[otherFilesPath] = readFile(backupPath + "/Contents/Resources/app.nw/" + gameHack.target);
                 }
 
 #else
                     //read from the backup once
-                if(otherFiles[unpackPath + "/" + gameHack.target].isEmpty()) {
-                    otherFiles[unpackPath + "/" + gameHack.target] = readFile(backupPath + "/" + gameHack.target);
+                if(otherFiles[otherFilesPath].isEmpty()) {
+                    otherFiles[otherFilesPath] = readFile(backupPath + "/" + gameHack.target);
                 }
 
 #endif
+                    QDEBUGVAR(otherFiles[otherFilesPath].size());
 
-                QByteArray otherFileByteArray = otherFiles[unpackPath + "/" + gameHack.target];
-                    QString otherFileString(otherFileByteArray);
+                    QString otherFileString(otherFiles[otherFilesPath]);
                     otherFileString.replace(gameHack.search, gameHack.replace);
-                    QFile otherFile(unpackPath + "/" + gameHack.target);
+                    otherFiles[otherFilesPath] = otherFileString.toLatin1();
+                    QFile otherFile(otherFilesPath);
                     if(otherFile.open(QIODevice::WriteOnly)) {
                         otherFile.write(otherFileString.toLatin1());
                         otherFile.close();

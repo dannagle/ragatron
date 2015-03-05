@@ -50,6 +50,15 @@
         <replace>the main hall of the G3. We can expect a large number of visitors.".localize(),15E2</replace>
     </hack>
     <hack>
+    <category>GDT</category>
+        <platform>all</platform>
+        <id>codeIncompleteAwesome</id>
+        <name>Code Incomplete training is Awesome!</name>
+        <target>compressed/codeNw.js</target>
+        <search>{id:"techTraining",name:"Code incomplete".localize(),cost:15E3,pointsCost:5,duration:2E4,basePoints:8,tF:1,dF:0.2,rF:0.1,sF:0,qF:0,maxP</search>
+        <replace>{id:"techTraining",name:"Code incomplete".localize(),cost:15E2,pointsCost:5,duration:2E4,basePoints:8,tF:3,dF:3,rF:3,sF:3,qF:0,maxP</replace>
+    </hack>
+    <hack>
         <category>Advanced</category>
         <platform>all</platform>
         <id>enableDeveloperCheck</id>
