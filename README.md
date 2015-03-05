@@ -8,7 +8,7 @@ Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's 
 
 <img src="githubscreenshots/largebooth_cheap.png" alt="GDT hack screenshot" width="500px" >
 
-This project is not officially supported by Lost Decade Games nor Greenheart Games. However, *you* can officially support Lost Decade Games by purchasing (multiple!) copies of their games to hack with this tool! ;-)
+This project is not officially supported by Lost Decade Games nor Greenheart Games. However, *you* can officially support indie game developers by purchasing (multiple!) copies of their games to hack with this tool! ;-)
 
 
 
