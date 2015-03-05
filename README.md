@@ -17,7 +17,9 @@ This project is not officially supported by Lost Decade Games nor Greenheart Gam
 Ragatron can be downloaded at  [Ragatron.com](http://ragatron.com/)
 
 
-![Ragatron GUI](githubscreenshots/ragatron_screenshot.png)
+<img src="githubscreenshots/ragatron_screenshot.png" alt="Ragatron GUI" width="500px" >
+
+
 
 ## Built-in Hacks for Game Dev Tycoon
 The only supported build is Humble Bundle version 2014-09-17
