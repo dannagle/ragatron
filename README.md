@@ -2,12 +2,14 @@
 
 "*It is like Game Genie for Lost Decade Games!*" - Matt Hackett, co-founder of Lost Decade Games.
 
-Ragatron is an open source hacking tool for HTML5 games developed by [Lost Decade Games](http://www.lostdecadegames.com). It specifically targets [A Wizard's Lizard](http://www.wizardslizard.com) and [Lava Blade](http://www.lavablade.com). It is available for Windows and (Intel-based) Mac.
+Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's Lizard](http://www.wizardslizard.com) and [Lava Blade](http://www.lavablade.com) developed by [Lost Decade Games](http://www.lostdecadegames.com). It also targets [Game Dev Tycoon](http://www.greenheartgames.com/app/game-dev-tycoon/) by [Greenheart Games](http://www.greenheartgames.com) . It is available for Windows and (Intel-based) Mac.
 
-![AWL hack screenshot](githubscreenshots/hacked_awl_crop.jpg) ![AWL hack screenshot](githubscreenshots/lavablade_hack_crop.jpg)
+![AWL hack screenshot](githubscreenshots/hacked_awl_crop.jpg) ![LB hack screenshot](githubscreenshots/lavablade_hack_crop.jpg)
+
+![GDT hack screenshot](githubscreenshots/largebooth_cheap.png)
 
 
-This project is not officially supported by Lost Decade Games. However, *you* can officially support Lost Decade Games by purchasing (multiple!) copies of their games to hack with this tool! ;-)
+This project is not officially supported by Lost Decade Games nor Greenheart Games. However, *you* can officially support Lost Decade Games by purchasing (multiple!) copies of their games to hack with this tool! ;-)
 
 
 
@@ -16,7 +18,17 @@ This project is not officially supported by Lost Decade Games. However, *you* ca
 Ragatron can be downloaded at  [Ragatron.com](http://ragatron.com/)
 
 
-![Ragatron AWL hack](githubscreenshots/ragatron_screenshot.png)
+![Ragatron GUI](githubscreenshots/ragatron_screenshot.png)
+
+## Built-in Hacks for Game Dev Tycoon
+The only supported build is Humble Bundle version 2014-09-17
+
+- Contracts pay 100x
+- Research Points grow much faster
+- Large G3 Booth is cheap
+- Code Incomplete is Awesome!
+
+
 
 ## Built-in Hacks for A Wizard's Lizard
 The only supported build is Humble Bundle version 2015-02-05
@@ -90,7 +102,7 @@ Explanation:
 
 ### Todo
 
-- Expand to support other games
+- Expand to support more games
 - Auto-detect the HTML5 binary joins (currently hard-coded).
 - This project is currently accepting pull requests of XML expansions.  
 
@@ -101,5 +113,5 @@ Explanation:
 GPL v2 or later
 
 
-###Author
+### Author
 &copy; 2015 Dan Nagle -  [@NagleCode](http://twitter.com/NagleCode) - [DanNagle.com](http://DanNagle.com)
