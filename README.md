@@ -1,7 +1,5 @@
 # Ragatron
 
-"*It is like Game Genie for Lost Decade Games!*" - Matt Hackett, co-founder of Lost Decade Games.
-
 Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's Lizard](http://www.wizardslizard.com) and [Lava Blade](http://www.lavablade.com) developed by [Lost Decade Games](http://www.lostdecadegames.com). It also targets [Game Dev Tycoon](http://www.greenheartgames.com/app/game-dev-tycoon/) by [Greenheart Games](http://www.greenheartgames.com) . It is available for Windows and (Intel-based) Mac.
 
 ![AWL hack screenshot](githubscreenshots/hacked_awl_crop.jpg) ![LB hack screenshot](githubscreenshots/lavablade_hack_crop.jpg)
@@ -32,7 +30,7 @@ The only supported build is Humble Bundle version 2014-09-17
 
 
 ## Built-in Hacks for A Wizard's Lizard
-The only supported build is Humble Bundle version 2015-02-05
+The only supported build is Humble Bundle version 2015-05-07
 
 
 - Start with 1 million gold
