@@ -10,5 +10,6 @@
         <file>dannagle_logo_fadewhite.png</file>
         <file>Twitter_logo_blue.png</file>
         <file>cheats/gamedevtycoon.xml</file>
+        <file>cheats/elliotquest.xml</file>
     </qresource>
 </RCC>

@@ -1,0 +1,65 @@
+<xml>
+    <title>Elliot Quest</title>
+    <windows>
+        <defaultpath>C:/Program Files (x86)/elliot_quest</defaultpath>
+        <md5>9b68159602020ffc6a9b72615e45df50</md5>
+        <app_nw_is_compressed>0</app_nw_is_compressed>
+        <app_nw_is_hidden>0</app_nw_is_hidden>
+        <app_nw_bytelocation>0</app_nw_bytelocation>
+        <target>GameDevTycoon.exe</target>
+        <outputname>GameDevTycoon.exe</outputname>
+        <launchfile>defaultBrowser.html</launchfile>
+    </windows>
+    <mac>
+        <defaultpath>/Applications/elliot_quest.app</defaultpath>
+        <md5>9b68159602020ffc6a9b72615e45df50</md5>
+        <app_nw_is_compressed>0</app_nw_is_compressed>
+        <app_nw_is_hidden>0</app_nw_is_hidden>
+        <app_nw_bytelocation>0</app_nw_bytelocation>
+        <target>Contents/Resources/app.nw/game.min.js</target>
+        <outputname>Contents/Resources/app.nw/game.min.js</outputname>
+        <launchfile>index.html</launchfile>
+    </mac>
+    <linux>
+    </linux>
+    <hack>
+        <category>Elliot</category>
+        <platform>all</platform>
+        <id>elliot10health</id>
+        <name>Start with 16 hearts</name>
+        <target>game.min.js</target>
+        <search>this.makeAnims('player/player');this.health=3;this.invincibleTimer=new</search>
+        <replace>this.makeAnims('player/player');this.health=16;this.invincibleTimer=new</replace>
+    </hack>
+    <hack>
+        <category>Elliot</category>
+        <platform>all</platform>
+        <id>elliotHighJump</id>
+        <name>Jump higher</name>
+        <target>game.min.js</target>
+        <search>accelAir:200,JUMP_AMOUNT:107,invincible:</search>
+        <replace>accelAir:200,JUMP_AMOUNT:187,invincible:</replace>
+    </hack>
+
+    <hack>
+        <category>Elliot</category>
+        <platform>all</platform>
+        <id>elliotStrongArrow</id>
+        <name>Stronger Arrow</name>
+        <target>game.min.js</target>
+        <search>wmIgnore:true,size:{x:9,y:3},dmg:1,animSheet:null</search>
+        <replace>wmIgnore:true,size:{x:9,y:3},dmg:5,animSheet:null</replace>
+    </hack>
+
+
+
+    <hack>
+        <category>Advanced</category>
+        <platform>all</platform>
+        <id>enableDeveloperCheck</id>
+        <name>Expose Developer Tools (Use Caution)</name>
+        <target>package.json</target>
+        <search>"toolbar": false,</search>
+        <replace>"toolbar": true,</replace>
+    </hack>
+</xml>
