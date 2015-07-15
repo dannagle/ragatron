@@ -47,11 +47,20 @@
         <id>elliotStrongArrow</id>
         <name>Stronger Arrow</name>
         <target>game.min.js</target>
-        <search>wmIgnore:true,size:{x:9,y:3},dmg:1,animSheet:null</search>
-        <replace>wmIgnore:true,size:{x:9,y:3},dmg:5,animSheet:null</replace>
+        <search>switch(ig.game.arrowLevel){case 0:this.dmg*=1;break;case 1:this.dmg*=1.5;break;case 2:this.dmg*=2;break;}</search>
+        <replace>switch(ig.game.arrowLevel){case 0:this.dmg*=4;break;case 4:this.dmg*=6;break;case 2:this.dmg*=8;break;}</replace>
     </hack>
 
 
+    <hack>
+        <category>Elliot</category>
+        <platform>all</platform>
+        <id>elliotFastArrow</id>
+        <name>Faster Arrow</name>
+        <target>game.min.js</target>
+        <search>perkAgi:function(){if(ig.game.perkSkills[10])ig.game.player.fireArrowTime.set(.45);if(ig.game.perkSkills[11])ig.game.player.fireArrowTime.set(.4);if(ig.game.perkSkills[12])ig.game.player.fireArrowTime.set(.3);},upd</search>
+        <replace>perkAgi:function(){if(ig.game.perkSkills[10])ig.game.player.fireArrowTime.set(.25);if(ig.game.perkSkills[11])ig.game.player.fireArrowTime.set(.2);if(ig.game.perkSkills[12])ig.game.player.fireArrowTime.set(.1);},upd</replace>
+    </hack>
 
     <hack>
         <category>Advanced</category>
