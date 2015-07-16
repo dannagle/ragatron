@@ -8,7 +8,7 @@
         <app_nw_bytelocation>41409024</app_nw_bytelocation>
         <target>elliot_quest.exe</target>
         <outputname>elliot_quest_hacked.exe</outputname>
-        <launchfile>index.html</launchfile>
+        <launchfile>game.min.js</launchfile>
     </windows>
     <mac>
         <defaultpath>/Applications/elliot_quest.app</defaultpath>
@@ -42,7 +42,7 @@
     </hack>
 
     <hack>
-        <category>Elliot</category>
+        <category>Items</category>
         <platform>all</platform>
         <id>elliotStrongArrow</id>
         <name>Stronger Arrow</name>
@@ -53,7 +53,7 @@
 
 
     <hack>
-        <category>Elliot</category>
+        <category>Items</category>
         <platform>all</platform>
         <id>elliotFastArrow</id>
         <name>Faster Arrow</name>
@@ -61,6 +61,17 @@
         <search>perkAgi:function(){if(ig.game.perkSkills[10])ig.game.player.fireArrowTime.set(.45);if(ig.game.perkSkills[11])ig.game.player.fireArrowTime.set(.4);if(ig.game.perkSkills[12])ig.game.player.fireArrowTime.set(.3);},upd</search>
         <replace>perkAgi:function(){if(ig.game.perkSkills[10])ig.game.player.fireArrowTime.set(.25);if(ig.game.perkSkills[11])ig.game.player.fireArrowTime.set(.2);if(ig.game.perkSkills[12])ig.game.player.fireArrowTime.set(.1);},upd</replace>
     </hack>
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotMoreCoin</id>
+        <name>Chest has 500 coins</name>
+        <target>game.min.js</target>
+        <search>1)',size:{x:16,y:16},health:1,coins:10,flip:false,m</search>
+        <replace>1)',size:{x:16,y:16},health:1,coins:500,flip:false,m</replace>
+    </hack>
+
+
 
     <hack>
         <category>Advanced</category>
