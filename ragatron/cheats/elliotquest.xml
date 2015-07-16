@@ -2,13 +2,13 @@
     <title>Elliot Quest</title>
     <windows>
         <defaultpath>C:/Program Files (x86)/elliot_quest</defaultpath>
-        <md5>9b68159602020ffc6a9b72615e45df50</md5>
-        <app_nw_is_compressed>0</app_nw_is_compressed>
-        <app_nw_is_hidden>0</app_nw_is_hidden>
-        <app_nw_bytelocation>0</app_nw_bytelocation>
-        <target>GameDevTycoon.exe</target>
-        <outputname>GameDevTycoon.exe</outputname>
-        <launchfile>defaultBrowser.html</launchfile>
+        <md5>79b0f87d72859c46653550765b886987</md5>
+        <app_nw_is_compressed>1</app_nw_is_compressed>
+        <app_nw_is_hidden>1</app_nw_is_hidden>
+        <app_nw_bytelocation>41409024</app_nw_bytelocation>
+        <target>elliot_quest.exe</target>
+        <outputname>elliot_quest_hacked.exe</outputname>
+        <launchfile>index.html</launchfile>
     </windows>
     <mac>
         <defaultpath>/Applications/elliot_quest.app</defaultpath>
