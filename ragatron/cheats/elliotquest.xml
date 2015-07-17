@@ -71,6 +71,45 @@
         <replace>1)',size:{x:16,y:16},health:1,coins:500,flip:false,m</replace>
     </hack>
 
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotCheapWhirl</id>
+        <name>Whirlwind is cheap</name>
+        <target>game.min.js</target>
+        <search>whirlwindcost:5,arrowcost</search>
+        <replace>whirlwindcost:1,arrowcost</replace>
+    </hack>
+
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotCheapFlame</id>
+        <name>Flame is cheap</name>
+        <target>game.min.js</target>
+        <search>owcost:0,flamecost:3,rockco</search>
+        <replace>owcost:0,flamecost:1,rockco</replace>
+    </hack>
+
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotCheapRock</id>
+        <name>Rock is cheap</name>
+        <target>game.min.js</target>
+        <search>rockcost:5,icecost</search>
+        <replace>rockcost:1,icecost</replace>
+    </hack>
+
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotCheapIce</id>
+        <name>Ice is cheap</name>
+        <target>game.min.js</target>
+        <search>,icecost:10,waitin</search>
+        <replace>,icecost:1,waitin</replace>
+    </hack>
 
 
     <hack>
