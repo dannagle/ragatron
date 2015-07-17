@@ -1,6 +1,6 @@
 # Ragatron
 
-Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's Lizard](http://www.wizardslizard.com) and [Lava Blade](http://www.lavablade.com) developed by [Lost Decade Games](http://www.lostdecadegames.com). It also targets [Game Dev Tycoon](http://www.greenheartgames.com/app/game-dev-tycoon/) by [Greenheart Games](http://www.greenheartgames.com) and [Elliot Quest](http://www.greenheartgames.com/app/game-dev-tycoon/) by [Ansimuz Games](http://ansimuz.com/). It is available for Windows and (Intel-based) Mac. The only targeted versions are copies purchased from the Humble Store.
+Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's Lizard](http://www.wizardslizard.com) and [Lava Blade](http://www.lavablade.com) developed by [Lost Decade Games](http://www.lostdecadegames.com). It also targets [Game Dev Tycoon](http://www.greenheartgames.com/app/game-dev-tycoon/) by [Greenheart Games](http://www.greenheartgames.com) and [Elliot Quest](http://elliotquest.com/) by [Ansimuz Games](http://ansimuz.com/). It is available for Windows and (Intel-based) Mac. The only targeted versions are copies purchased from the Humble Store.
 
 ![AWL hack screenshot](githubscreenshots/hacked_awl_crop.jpg) ![LB hack screenshot](githubscreenshots/lavablade_hack_crop.jpg)
 
