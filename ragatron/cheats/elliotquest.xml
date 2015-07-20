@@ -48,7 +48,7 @@
         <name>Stronger Arrow</name>
         <target>game.min.js</target>
         <search>switch(ig.game.arrowLevel){case 0:this.dmg*=1;break;case 1:this.dmg*=1.5;break;case 2:this.dmg*=2;break;}</search>
-        <replace>switch(ig.game.arrowLevel){case 0:this.dmg*=4;break;case 4:this.dmg*=6;break;case 2:this.dmg*=8;break;}</replace>
+        <replace>switch(ig.game.arrowLevel){case 0:this.dmg*=4;break;case 1:this.dmg*=6;break;case 2:this.dmg*=8;break;}</replace>
     </hack>
 
 
