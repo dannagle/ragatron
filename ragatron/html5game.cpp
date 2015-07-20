@@ -280,6 +280,12 @@ bool HTML5Game::isEXEValid()
 
     }
 
+    if(gameByteArray.isEmpty()) {
+        QDEBUG() << "Game not installed. ";
+
+        return false;
+    }
+
     QByteArray fileHash;
     fileHash = QCryptographicHash::hash(gameByteArray, QCryptographicHash::Md5);
     QString MD5 = fileHash.toHex().toLower();

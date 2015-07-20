@@ -157,6 +157,14 @@ MainWindow::MainWindow(QWidget *parent) :
             html5GameList.append(gamedevTycoonHTML5);
         }
 
+        // load internal list
+        HTML5Game * elliotQuestHTML5 = new HTML5Game();
+        scansuccess = elliotQuestHTML5->scanXML(":/cheats/elliotquest.xml");
+        if(scansuccess) {
+            html5GameList.append(elliotQuestHTML5);
+        }
+
+
     }
 
     if(html5GameList.isEmpty()) {

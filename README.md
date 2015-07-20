@@ -1,12 +1,15 @@
 # Ragatron
 
-Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's Lizard](http://www.wizardslizard.com) and [Lava Blade](http://www.lavablade.com) developed by [Lost Decade Games](http://www.lostdecadegames.com). It also targets [Game Dev Tycoon](http://www.greenheartgames.com/app/game-dev-tycoon/) by [Greenheart Games](http://www.greenheartgames.com) . It is available for Windows and (Intel-based) Mac.
+Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's Lizard](http://www.wizardslizard.com) and [Lava Blade](http://www.lavablade.com) developed by [Lost Decade Games](http://www.lostdecadegames.com). It also targets [Game Dev Tycoon](http://www.greenheartgames.com/app/game-dev-tycoon/) by [Greenheart Games](http://www.greenheartgames.com) and [Elliot Quest](http://elliotquest.com/) by [Ansimuz Games](http://ansimuz.com/). It is available for Windows and (Intel-based) Mac. The only targeted versions are copies purchased from the Humble Store.
 
 ![AWL hack screenshot](githubscreenshots/hacked_awl_crop.jpg) ![LB hack screenshot](githubscreenshots/lavablade_hack_crop.jpg)
 
 <img src="githubscreenshots/largebooth_cheap.png" alt="GDT hack screenshot" width="500px" >
 
-This project is not officially supported by Lost Decade Games nor Greenheart Games. However, *you* can officially support indie game developers by purchasing (multiple!) copies of their games to hack with this tool! ;-)
+
+<img src="githubscreenshots/hacked_elliotquest.png" alt="Elliot Quest hack" width="500px" >
+
+This project is not officially supported by Lost Decade Games, Greenheart Games, nor Ansimuz Games. However, *you* can officially support indie game developers by purchasing (multiple!) copies of their games to hack with this tool! ;-)
 
 
 
@@ -16,17 +19,6 @@ Ragatron can be downloaded at  [Ragatron.com](http://ragatron.com/)
 
 
 <img src="githubscreenshots/ragatron_screenshot.png" alt="Ragatron GUI" width="500px" >
-
-
-
-## Built-in Hacks for Game Dev Tycoon
-The only supported build is Humble Bundle version 2014-09-17
-
-- Contracts pay 100x
-- Research Points grow much faster
-- Large G3 Booth is cheap
-- Code Incomplete is Awesome!
-
 
 
 ## Built-in Hacks for A Wizard's Lizard
@@ -54,6 +46,37 @@ The only supported build is the version on Humble Bundle.
 - Blitz has extra movement, attack, and health
 - Earn more gold
 - Expose Developer Tools
+
+
+
+
+## Built-in Hacks for Game Dev Tycoon
+The only supported build is Humble Bundle version 2014-09-17
+
+- Contracts pay 100x
+- Research Points grow much faster
+- Large G3 Booth is cheap
+- Code Incomplete is Awesome!
+- Expose Developer Tools
+
+
+
+
+
+## Built-in Hacks for Elliot Quest
+The only supported build is Humble Bundle version 2015-03-25
+
+- Start with 16 hearts
+- Jump Higher
+- Stronger Arrow
+- Chest has 500 coins
+- Whirlwind is cheap
+- Flame is cheap
+- Rock is cheap
+- Ice is cheap
+- Expose Developer Tools
+
+
 
 ### Instructions
 

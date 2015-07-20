@@ -1,0 +1,124 @@
+<xml>
+    <title>Elliot Quest</title>
+    <windows>
+        <defaultpath>C:/Program Files (x86)/elliot_quest</defaultpath>
+        <md5>79b0f87d72859c46653550765b886987</md5>
+        <app_nw_is_compressed>1</app_nw_is_compressed>
+        <app_nw_is_hidden>1</app_nw_is_hidden>
+        <app_nw_bytelocation>41409024</app_nw_bytelocation>
+        <target>elliot_quest.exe</target>
+        <outputname>elliot_quest_hacked.exe</outputname>
+        <launchfile>game.min.js</launchfile>
+    </windows>
+    <mac>
+        <defaultpath>/Applications/elliot_quest.app</defaultpath>
+        <md5>9b68159602020ffc6a9b72615e45df50</md5>
+        <app_nw_is_compressed>0</app_nw_is_compressed>
+        <app_nw_is_hidden>0</app_nw_is_hidden>
+        <app_nw_bytelocation>0</app_nw_bytelocation>
+        <target>Contents/Resources/app.nw/game.min.js</target>
+        <outputname>Contents/Resources/app.nw/game.min.js</outputname>
+        <launchfile>index.html</launchfile>
+    </mac>
+    <linux>
+    </linux>
+    <hack>
+        <category>Elliot</category>
+        <platform>all</platform>
+        <id>elliot10health</id>
+        <name>Start with 16 hearts</name>
+        <target>game.min.js</target>
+        <search>this.makeAnims('player/player');this.health=3;this.invincibleTimer=new</search>
+        <replace>this.makeAnims('player/player');this.health=16;this.invincibleTimer=new</replace>
+    </hack>
+    <hack>
+        <category>Elliot</category>
+        <platform>all</platform>
+        <id>elliotHighJump</id>
+        <name>Jump higher</name>
+        <target>game.min.js</target>
+        <search>accelAir:200,JUMP_AMOUNT:107,invincible:</search>
+        <replace>accelAir:200,JUMP_AMOUNT:187,invincible:</replace>
+    </hack>
+
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotStrongArrow</id>
+        <name>Stronger Arrow</name>
+        <target>game.min.js</target>
+        <search>switch(ig.game.arrowLevel){case 0:this.dmg*=1;break;case 1:this.dmg*=1.5;break;case 2:this.dmg*=2;break;}</search>
+        <replace>switch(ig.game.arrowLevel){case 0:this.dmg*=4;break;case 1:this.dmg*=6;break;case 2:this.dmg*=8;break;}</replace>
+    </hack>
+
+
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotFastArrow</id>
+        <name>Faster Arrow</name>
+        <target>game.min.js</target>
+        <search>perkAgi:function(){if(ig.game.perkSkills[10])ig.game.player.fireArrowTime.set(.45);if(ig.game.perkSkills[11])ig.game.player.fireArrowTime.set(.4);if(ig.game.perkSkills[12])ig.game.player.fireArrowTime.set(.3);},upd</search>
+        <replace>perkAgi:function(){if(ig.game.perkSkills[10])ig.game.player.fireArrowTime.set(.25);if(ig.game.perkSkills[11])ig.game.player.fireArrowTime.set(.2);if(ig.game.perkSkills[12])ig.game.player.fireArrowTime.set(.1);},upd</replace>
+    </hack>
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotMoreCoin</id>
+        <name>Chest has 500 coins</name>
+        <target>game.min.js</target>
+        <search>1)',size:{x:16,y:16},health:1,coins:10,flip:false,m</search>
+        <replace>1)',size:{x:16,y:16},health:1,coins:500,flip:false,m</replace>
+    </hack>
+
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotCheapWhirl</id>
+        <name>Whirlwind is cheap</name>
+        <target>game.min.js</target>
+        <search>whirlwindcost:5,arrowcost</search>
+        <replace>whirlwindcost:1,arrowcost</replace>
+    </hack>
+
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotCheapFlame</id>
+        <name>Flame is cheap</name>
+        <target>game.min.js</target>
+        <search>owcost:0,flamecost:3,rockco</search>
+        <replace>owcost:0,flamecost:1,rockco</replace>
+    </hack>
+
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotCheapRock</id>
+        <name>Rock is cheap</name>
+        <target>game.min.js</target>
+        <search>rockcost:5,icecost</search>
+        <replace>rockcost:1,icecost</replace>
+    </hack>
+
+    <hack>
+        <category>Items</category>
+        <platform>all</platform>
+        <id>elliotCheapIce</id>
+        <name>Ice is cheap</name>
+        <target>game.min.js</target>
+        <search>,icecost:10,waitin</search>
+        <replace>,icecost:1,waitin</replace>
+    </hack>
+
+
+    <hack>
+        <category>Advanced</category>
+        <platform>all</platform>
+        <id>enableDeveloperCheck</id>
+        <name>Expose Developer Tools (Use Caution)</name>
+        <target>package.json</target>
+        <search>"toolbar": false,</search>
+        <replace>"toolbar": true,</replace>
+    </hack>
+</xml>
