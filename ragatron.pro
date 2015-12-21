@@ -2,6 +2,7 @@
 #
 # Project created by QtCreator 2015-01-12T19:32:08
 #
+# This code is copyright Dan Nagle and licensed GPL v2
 #-------------------------------------------------
 
 QT += core gui xml
