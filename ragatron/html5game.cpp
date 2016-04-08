@@ -255,6 +255,7 @@ bool HTML5Game::isEXEValid()
     if(gameByteArray.isEmpty() || nwEXEByteArray.isEmpty() || appNWByteArray.isEmpty()) {
 
 
+        QDEBUGVAR(backupPath + "/" + xml.target);
         gameByteArray = readFile(backupPath + "/" + xml.target);
 
 

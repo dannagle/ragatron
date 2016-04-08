@@ -143,6 +143,12 @@ MainWindow::MainWindow(QWidget *parent) :
             html5GameList.append(wizardlizardHTML5);
         }
 
+        HTML5Game * soulthiefHTML5 = new HTML5Game();
+        scansuccess = soulthiefHTML5->scanXML(":/cheats/soulthief.xml");
+        if(scansuccess) {
+            html5GameList.append(soulthiefHTML5);
+        }
+
         HTML5Game * lavabladeHTML5 = new HTML5Game();
         html5GameList.append(lavabladeHTML5);
         scansuccess = lavabladeHTML5->scanXML(":/cheats/lavablade.xml");

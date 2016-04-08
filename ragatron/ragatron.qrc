@@ -11,5 +11,6 @@
         <file>Twitter_logo_blue.png</file>
         <file>cheats/gamedevtycoon.xml</file>
         <file>cheats/elliotquest.xml</file>
+        <file>cheats/soulthief.xml</file>
     </qresource>
 </RCC>

@@ -1,0 +1,43 @@
+<xml>
+    <title>Soul Thief</title>
+    <windows>
+        <defaultpath>C:/Program Files (x86)/LostDecadeGames/SoulThief</defaultpath>
+        <md5>b8bdc04dd01363dc6989a20eff2f0718</md5>
+        <app_nw_is_compressed>1</app_nw_is_compressed>
+        <app_nw_is_hidden>1</app_nw_is_hidden>
+        <app_nw_bytelocation>39433216</app_nw_bytelocation>
+        <target>soulthief.exe</target>
+        <outputname>ASoulThief.exe</outputname>
+        <launchfile>game.js</launchfile>
+    </windows>
+    <mac>
+        <defaultpath>/Applications/SoulThief.app</defaultpath>
+        <md5>b080d371c0069d0a57d31dd6babc33da</md5>
+        <app_nw_is_compressed>0</app_nw_is_compressed>
+        <app_nw_is_hidden>0</app_nw_is_hidden>
+        <app_nw_bytelocation>0</app_nw_bytelocation>
+        <target>Contents/Resources/app.nw/game.js</target>
+        <outputname>Contents/Resources/app.nw/game.js</outputname>
+        <launchfile>game.js</launchfile>
+    </mac>
+    <linux>
+    </linux>
+    <hack>
+    <category>Core Stats</category>
+        <platform>all</platform>
+        <id>startwith15Hearts</id>
+        <name>Start with 15 Hearts</name>
+        <target>game.js</target>
+        <search>mortal:{bleeds:"bloodPuddle",healthMax:5,graceDu</search>
+        <replace>mortal:{bleeds:"bloodPuddle",healthMax:15,graceDu</replace>
+    </hack>
+    <hack>
+        <category>Advanced</category>
+        <platform>all</platform>
+        <id>enableDeveloperCheck</id>
+        <name>Expose Developer Tools (Use Caution)</name>
+        <target>package.json</target>
+        <search>"toolbar": false</search>
+        <replace>"toolbar": true</replace>
+    </hack>
+</xml>
