@@ -22,6 +22,7 @@
     </mac>
     <linux>
     </linux>
+
     <hack>
     <category>Core Stats</category>
         <platform>all</platform>
@@ -32,12 +33,40 @@
         <replace>mortal:{bleeds:"bloodPuddle",healthMax:15,graceDu</replace>
     </hack>
     <hack>
+    <category>Core Stats</category>
+        <platform>all</platform>
+        <id>startwith1000Gold</id>
+        <name>Start with 1 million gold</name>
+        <target>game.js</target>
+        <search>layerType:"raga",currentLevel:"library1",stats:{meleeDamageBonus:0},resources:{gold:0,key</search>
+        <replace>layerType:"raga",currentLevel:"library1",stats:{meleeDamageBonus:0},resources:{gold:1e6,key</replace>
+    </hack>
+    <hack>
+    <category>Core Stats</category>
+        <platform>all</platform>
+        <id>startwith1000Keys</id>
+        <name>Start with 1000 small keys</name>
+        <target>game.js</target>
+        <search>,key:0,bigKey:</search>
+        <replace>,key:1000,bigKey:</replace>
+    </hack>
+    <hack>
+    <category>Core Stats</category>
+        <platform>all</platform>
+        <id>startwith1000BigKeys</id>
+        <name>Start with 1000 big keys</name>
+        <target>game.js</target>
+        <search>bigKey:0},gear:{},items:[],elapsedT</search>
+        <replace>bigKey:1000},gear:{},items:[],elapsedT</replace>
+    </hack>
+    <hack>
         <category>Advanced</category>
         <platform>all</platform>
-        <id>enableDeveloperCheck</id>
+        <id>enableDeveloperCheckST</id>
         <name>Expose Developer Tools (Use Caution)</name>
         <target>package.json</target>
-        <search>"toolbar": false</search>
-        <replace>"toolbar": true</replace>
+        <search>"toolbar": false,</search>
+        <replace>"toolbar": true,</replace>
     </hack>
+
 </xml>
