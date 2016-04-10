@@ -59,14 +59,80 @@
         <search>bigKey:0},gear:{},items:[],elapsedT</search>
         <replace>bigKey:1000},gear:{},items:[],elapsedT</replace>
     </hack>
+
+<!--
+    <hack>
+    <category>Core Stats</category>
+        <platform>all</platform>
+        <id>startwith10000PrizeTickets1</id>
+        <name>Start with 10,000 prize tickets 1</name>
+        <target>game.js</target>
+        <search>tickets:0,toyPatterns</search>
+        <replace>tickets:1e4,toyPatterns</replace>
+    </hack>
+
+    <hack>
+    <category>Core Stats</category>
+        <platform>all</platform>
+        <id>startwith10000PrizeTickets2</id>
+        <name>Start with 10,000 prize tickets 2</name>
+        <target>game.js</target>
+        <search>level:1,toys:[],tickets:0,saveSession</search>
+        <replace>level:1,toys:[],tickets:1e4,saveSession</replace>
+    </hack>
+-->
+    <hack>
+    <category>Core Stats</category>
+        <platform>all</platform>
+        <id>startwith10000BonusTickets</id>
+        <name>10,000 bonus prize tickets</name>
+        <target>game.js</target>
+        <search>getTickets:function(){return this.data.lifetime.tickets}</search>
+        <replace>getTickets:function(){return (this.data.lifetime.tickets+1e4)}</replace>
+    </hack>
+
+
+
+    <hack>
+    <category>Raga</category>
+        <platform>all</platform>
+        <id>superStrongMeleeST</id>
+        <name>Super Strong Melee</name>
+        <target>game.js</target>
+        <search>currentLevel:"library1",stats:{meleeDamageBonus:0}</search>
+        <replace>currentLevel:"library1",stats:{meleeDamageBonus:10}</replace>
+    </hack>
+
+
+    <hack>
+    <category>Raga</category>
+        <platform>all</platform>
+        <id>startwithGearST</id>
+        <name>Start with gear</name>
+        <target>game.js</target>
+        <search>,gear:{},items:[],elapsedTime:0</search>
+        <replace>,gear:{},items:[],elapsedTime:0</replace>
+    </hack>
+
+
     <hack>
         <category>Advanced</category>
         <platform>all</platform>
-        <id>enableDeveloperCheckST</id>
-        <name>Expose Developer Tools (Use Caution)</name>
-        <target>package.json</target>
-        <search>"toolbar": false,</search>
-        <replace>"toolbar": true,</replace>
+        <id>showHitBoxes</id>
+        <name>Show Div Containers</name>
+        <target>game.js</target>
+        <search>cancelInputEvents:!1,debug:!1,rotation:0,</search>
+        <replace>cancelInputEvents:!1,debug:1,rotation:0,</replace>
     </hack>
-
+<!--
+    <hack>
+        <category>Advanced</category>
+        <platform>all</platform>
+        <id>noclippingST</id>
+        <name>No Clipping Mode</name>
+        <target>game.js</target>
+        <search>clip:!1,width:0,height:0,scaleX</search>
+        <replace>clip:1,width:0,height:0,scaleX</replace>
+    </hack>
+-->
 </xml>
