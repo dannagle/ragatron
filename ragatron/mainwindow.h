@@ -16,6 +16,7 @@ It is licensed GPL v2 or later.
 
 #include <QPushButton>
 
+
 namespace Ui {
 class MainWindow;
 }
@@ -38,6 +39,8 @@ public:
 
     void statusBarMessage(const QString &msg, int timeout = 3000, bool override = false);
     void gameButtonChecks(HTML5Game *game);
+
+
 public slots:
     void html5Unpack(xml_t xml);
     void html5Pack(xml_t xml);
@@ -46,8 +49,6 @@ private slots:
     void gotoDanNagleTwitter();
     void gotoRagatron();
     void on_launchUnpackFolderButton_clicked();
-
-
     void on_unpackPathButton_clicked();
 
 private:

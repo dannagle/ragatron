@@ -19,6 +19,7 @@ It is licensed GPL v2 or later.
 #include <QDate>
 #include <QPixmap>
 
+
 #include "quazip/quazip.h"
 #include "quazip/quazipfile.h"
 #include "quazip/JlCompress.h"
@@ -460,3 +461,4 @@ void MainWindow::on_unpackPathButton_clicked()
     }
 
 }
+
