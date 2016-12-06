@@ -3,8 +3,9 @@
     <windows>
         <defaultpath>C:/Program Files (x86)/LostDecadeGames/SoulThief</defaultpath>
         <md5>b8bdc04dd01363dc6989a20eff2f0718</md5>
-        <app_nw_is_compressed>1</app_nw_is_compressed>
-        <app_nw_is_hidden>1</app_nw_is_hidden>
+        <steampath>C:\Program Files (x86)\Steam\steamapps\common\Soul Thief</steampath>
+        <app_nw_is_compressed>0</app_nw_is_compressed>
+        <app_nw_is_hidden>0</app_nw_is_hidden>
         <app_nw_bytelocation>39433216</app_nw_bytelocation>
         <target>soulthief.exe</target>
         <outputname>ASoulThief.exe</outputname>
@@ -12,6 +13,7 @@
     </windows>
     <mac>
         <defaultpath>/Applications/SoulThief.app</defaultpath>
+        <steampath>~/Library/Application Support/Steam/steamapps/common</steampath>
         <md5>b080d371c0069d0a57d31dd6babc33da</md5>
         <app_nw_is_compressed>0</app_nw_is_compressed>
         <app_nw_is_hidden>0</app_nw_is_hidden>
