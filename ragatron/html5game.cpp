@@ -181,6 +181,7 @@ bool HTML5Game::scanXML(QString xmlFile) {
     if(dList.count() > 0) {
         QDomElement e = dList.at(0).toElement();
         GRABXML(defaultpath);
+        xml.defaultpath.replace("~", QDir::homePath());
         GRABXML(md5);
         xml.app_nw_is_compressed = grabXMLData(e, "app_nw_is_compressed").toUInt();
         xml.app_nw_is_hidden = grabXMLData(e, "app_nw_is_hidden").toUInt();

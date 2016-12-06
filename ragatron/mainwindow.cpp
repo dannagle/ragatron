@@ -137,17 +137,22 @@ MainWindow::MainWindow(QWidget *parent) :
         }
     } else {
         // load internal list
+        /*
         HTML5Game * wizardlizardHTML5 = new HTML5Game();
         scansuccess = wizardlizardHTML5->scanXML(":/cheats/wizardlizard.xml");
         if(scansuccess) {
             html5GameList.append(wizardlizardHTML5);
         }
 
+        */
+
         HTML5Game * soulthiefHTML5 = new HTML5Game();
         scansuccess = soulthiefHTML5->scanXML(":/cheats/soulthief.xml");
         if(scansuccess) {
             html5GameList.append(soulthiefHTML5);
         }
+
+        /*
 
         HTML5Game * lavabladeHTML5 = new HTML5Game();
         html5GameList.append(lavabladeHTML5);
@@ -170,6 +175,7 @@ MainWindow::MainWindow(QWidget *parent) :
             html5GameList.append(elliotQuestHTML5);
         }
 
+        */
 
     }
 
