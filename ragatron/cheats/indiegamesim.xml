@@ -1,0 +1,122 @@
+<xml>
+    <title>Indie Game Sim</title>
+    <windows>
+        <defaultpath>C:/Program Files (x86)/Steam/steamapps/common/Soul Thief</defaultpath>
+        <md5>b8bdc04dd01363dc6989a20eff2f0718</md5>
+        <app_nw_is_compressed>0</app_nw_is_compressed>
+        <app_nw_is_hidden>0</app_nw_is_hidden>
+        <app_nw_bytelocation>39433216</app_nw_bytelocation>
+        <target>soulthief.exe</target>
+        <outputname>ASoulThief.exe</outputname>
+        <launchfile>game.js</launchfile>
+    </windows>
+    <mac>
+        <defaultpath>~/Library/Application Support/Steam/steamapps/common/Indie Game Sim/igs.app</defaultpath>
+        <md5>d73d8389e1f1ef6c060e0993e061cdfd</md5>
+        <app_nw_is_compressed>0</app_nw_is_compressed>
+        <app_nw_is_hidden>0</app_nw_is_hidden>
+        <app_nw_bytelocation>0</app_nw_bytelocation>
+        <target>Contents/Resources/app.nw/game.js</target>
+        <outputname>Contents/Resources/app.nw/game.js</outputname>
+        <launchfile>game.js</launchfile>
+    </mac>
+    <linux>
+    </linux>
+
+
+    <hack>
+    <category>Store</category>
+        <platform>all</platform>
+        <id>igsOvergrownTileCheap</id>
+        <name>Overgrown Tile is cheap.</name>
+        <target>game.js</target>
+        <search>16},price:32e3,tileIndex:14</search>
+        <replace>16},price:2e2,tileIndex:14</replace>
+    </hack>
+
+
+    <hack>
+    <category>Store</category>
+        <platform>all</platform>
+        <id>igsScaryTileCheap</id>
+        <name>Scary Tile is cheap.</name>
+        <target>game.js</target>
+        <search>price:64e3,tileIndex:15</search>
+        <replace>price:2e2,tileIndex:15</replace>
+    </hack>
+
+    <hack>
+    <category>Store</category>
+        <platform>all</platform>
+        <id>igsCheapHouse</id>
+        <name>House is cheap.</name>
+        <target>game.js</target>
+        <search>price:35e4,flag:"rlHouse"</search>
+        <replace>price:3e2,flag:"rlHouse"</replace>
+    </hack>
+
+
+    <hack>
+    <category>Store</category>
+        <platform>all</platform>
+        <id>igsCheapSlide</id>
+        <name>Waterslide is cheap.</name>
+        <target>game.js</target>
+        <search>price:25e4,flag:"rlWaterslide"</search>
+        <replace>price:2e2,flag:"rlWaterslide"</replace>
+    </hack>
+
+
+    <hack>
+    <category>Store</category>
+        <platform>all</platform>
+        <id>igsCheapHelipad</id>
+        <name>Helicopter Pad is cheap.</name>
+        <target>game.js</target>
+        <search>0},price:1e6,flag:"rlChopperPad"</search>
+        <replace>0},price:1e2,flag:"rlChopperPad"</replace>
+    </hack>
+
+    <hack>
+    <category>Store</category>
+        <platform>all</platform>
+        <id>igsCheapHelicopter</id>
+        <name>Helicopter is cheap.</name>
+        <target>game.js</target>
+        <search>price:1e6,flag:"rlChopper"</search>
+        <replace>price:1e2,flag:"rlChopper"</replace>
+    </hack>
+
+
+    <hack>
+    <category>Store</category>
+        <platform>all</platform>
+        <id>igsCheapAirship</id>
+        <name>Airship is cheap.</name>
+        <target>game.js</target>
+        <search>0},price:3e6,flag:"rlAirship"</search>
+        <replace>0},price:3e2,flag:"rlAirship"</replace>
+    </hack>
+
+    <hack>
+    <category>Store</category>
+        <platform>all</platform>
+        <id>igsCheapTower</id>
+        <name>Tower of ID is cheap.</name>
+        <target>game.js</target>
+        <search>price:1e7,flag:"rlTower"}</search>
+        <replace>price:1e2,flag:"rlTower"}</replace>
+    </hack>
+
+
+    <hack>
+    <category>Game Developer</category>
+        <platform>all</platform>
+        <id>igsCheaperPublish</id>
+        <name>Games cost less to publish</name>
+        <target>game.js</target>
+        <search><![CDATA[getGameTotalCost:function(e){var t=0,n=e.tiles;for(var r=0;r<n.length;++r)for(var i=0;i<n[r].length;++i){var s=n[r][i],o=m[s]||0;t+=o}return t}]]></search>
+        <replace><![CDATA[getGameTotalCost:function(e){var t=0,n=e.tiles;for(var r=0;r<n.length;++r)for(var i=0;i<n[r].length;++i){var s=n[r][i],o=m[s]||0;t+=o}return (t/1000)}]]></replace>
+    </hack>
+
+</xml>

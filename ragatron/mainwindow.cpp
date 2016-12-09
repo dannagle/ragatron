@@ -152,6 +152,13 @@ MainWindow::MainWindow(QWidget *parent) :
             html5GameList.append(soulthiefHTML5);
         }
 
+        // load internal list
+        HTML5Game * indiegamesimHTML5 = new HTML5Game();
+        scansuccess = indiegamesimHTML5->scanXML(":/cheats/indiegamesim.xml");
+        if(scansuccess) {
+            html5GameList.append(indiegamesimHTML5);
+        }
+
 
         HTML5Game * wizardlizardHTML5 = new HTML5Game();
         scansuccess = wizardlizardHTML5->scanXML(":/cheats/wizardlizard.xml");
