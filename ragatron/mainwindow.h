@@ -11,10 +11,14 @@ It is licensed GPL v2 or later.
 #include <QMainWindow>
 #include <QStringList>
 
+#include <QPushButton>
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
+#include <QBuffer>
+
 #include "globals.h"
 #include "html5game.h"
-
-#include <QPushButton>
+#include "filedownloader.h"
 
 
 namespace Ui {
@@ -40,6 +44,11 @@ public:
     void statusBarMessage(const QString &msg, int timeout = 3000, bool override = false);
     void gameButtonChecks(HTML5Game *game);
 
+    QMediaPlayer *player;
+    FileDownloader * mp3;
+    QBuffer * mediaStream;
+    QByteArray mediaStreamBuffer;
+
 
 public slots:
     void html5Unpack(xml_t xml);
@@ -49,7 +58,13 @@ private slots:
     void gotoDanNagleTwitter();
     void gotoRagatron();
     void on_launchUnpackFolderButton_clicked();
+
+
     void on_unpackPathButton_clicked();
+
+    void playMP3();
+
+    //void on_playLostcastButton_clicked();
 
 private:
     Ui::MainWindow *ui;

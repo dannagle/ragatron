@@ -18,6 +18,7 @@ It is licensed GPL v2 or later.
 #include <QTime>
 #include <QDate>
 #include <QPixmap>
+#include <QBuffer>
 
 
 #include "quazip/quazip.h"
@@ -45,6 +46,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     //setSizeGripEnabled( false ) ;
+
+    player = new QMediaPlayer(this);
+
+    //not ready yet. Gotta fix ssl problem.
+    //QUrl mp3Url("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png");
+    //mp3 = new FileDownloader(mp3Url, this);
+    //QDEBUG() <<"connect downloader" << connect(mp3, SIGNAL (downloaded()), this, SLOT (playMP3()));
 
 
     QSettings settings(SETTINGSFILE, QSettings::IniFormat);
@@ -138,22 +146,18 @@ MainWindow::MainWindow(QWidget *parent) :
         }
     } else {
         // load internal list
-        /*
-        HTML5Game * wizardlizardHTML5 = new HTML5Game();
-        scansuccess = wizardlizardHTML5->scanXML(":/cheats/wizardlizard.xml");
-        if(scansuccess) {
-            html5GameList.append(wizardlizardHTML5);
-        }
-
-        */
-
         HTML5Game * soulthiefHTML5 = new HTML5Game();
         scansuccess = soulthiefHTML5->scanXML(":/cheats/soulthief.xml");
         if(scansuccess) {
             html5GameList.append(soulthiefHTML5);
         }
 
-        /*
+
+        HTML5Game * wizardlizardHTML5 = new HTML5Game();
+        scansuccess = wizardlizardHTML5->scanXML(":/cheats/wizardlizard.xml");
+        if(scansuccess) {
+            html5GameList.append(wizardlizardHTML5);
+        }
 
         HTML5Game * lavabladeHTML5 = new HTML5Game();
         html5GameList.append(lavabladeHTML5);
@@ -176,7 +180,6 @@ MainWindow::MainWindow(QWidget *parent) :
             html5GameList.append(elliotQuestHTML5);
         }
 
-        */
 
     }
 
@@ -459,6 +462,24 @@ void MainWindow::on_unpackPathButton_clicked()
     } else {
         ui->unpackPathEdt->setStyleSheet("");
     }
+
+}
+
+void MainWindow::playMP3()
+{
+    QDEBUG();
+    mediaStream = new QBuffer(this);
+    QDEBUG();
+    mediaStreamBuffer.clear();
+    QDEBUG();
+    mediaStreamBuffer.append(mp3->downloadedData());
+    QDEBUG();
+    mediaStream->setBuffer(&mediaStreamBuffer);
+    QDEBUG();
+    player->setMedia(QMediaContent(), mediaStream);
+    QDEBUG();
+    player->play();
+    QDEBUG();
 
 }
 

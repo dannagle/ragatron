@@ -5,7 +5,7 @@
 # This code is copyright Dan Nagle and licensed GPL v2
 #-------------------------------------------------
 
-QT += core gui xml
+QT += core gui xml network multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -41,7 +41,8 @@ SOURCES += ragatron/main.cpp\
     quazip/quazipnewinfo.cpp \
     quazip/unzip.c \
     quazip/zip.c \
-    ragatron/cheatui.cpp
+    ragatron/cheatui.cpp \
+    ragatron/filedownloader.cpp
 
 HEADERS  += ragatron/mainwindow.h \
     ragatron/globals.h \
@@ -63,7 +64,8 @@ HEADERS  += ragatron/mainwindow.h \
     quazip/unzip.h \
     quazip/zip.h \
     ragatron/cheatui.h \
-    ragatron/hackstruct.h
+    ragatron/hackstruct.h \
+    ragatron/filedownloader.h
 
 FORMS    += ragatron/mainwindow.ui \
     ragatron/cheatui.ui
