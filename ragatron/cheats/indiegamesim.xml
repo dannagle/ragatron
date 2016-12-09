@@ -1,13 +1,13 @@
 <xml>
     <title>Indie Game Sim</title>
     <windows>
-        <defaultpath>C:/Program Files (x86)/Steam/steamapps/common/Soul Thief</defaultpath>
-        <md5>b8bdc04dd01363dc6989a20eff2f0718</md5>
+        <defaultpath>C:/Users/Dan/Downloads/igs-1.0.0-win64/win64</defaultpath>
+        <md5>033b0e504ac2deaa50c2a5c65187bdd7</md5>
         <app_nw_is_compressed>0</app_nw_is_compressed>
         <app_nw_is_hidden>0</app_nw_is_hidden>
-        <app_nw_bytelocation>39433216</app_nw_bytelocation>
-        <target>soulthief.exe</target>
-        <outputname>ASoulThief.exe</outputname>
+        <app_nw_bytelocation>0</app_nw_bytelocation>
+        <target>igs.exe</target>
+        <outputname>igs.exe</outputname>
         <launchfile>game.js</launchfile>
     </windows>
     <mac>

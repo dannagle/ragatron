@@ -350,7 +350,12 @@ bool HTML5Game::canRepack()
 
 
     if(gameByteArray.isEmpty() || nwEXEByteArray.isEmpty() || appNWByteArray.isEmpty()
-            || packageJSONByteArray.isEmpty() || indexHTMLByteArray.isEmpty()
+            ||
+
+            (packageJSONByteArray.isEmpty() && !QFile::exists(unpackPath + "/package.nw/package.json")) ||
+
+
+            (indexHTMLByteArray.isEmpty() && !QFile::exists(unpackPath + "/package.nw/index.html"))
 
             ) {
 
@@ -448,7 +453,11 @@ bool HTML5Game::repack()
     QHash<QString, QByteArray> otherFiles;
     otherFiles.clear();
 
-    if(packageJSONByteArray.size() > 0 && indexHTMLByteArray.size() > 0) {
+    if((packageJSONByteArray.size() > 0 && indexHTMLByteArray.size() > 0)
+
+            || (QFile::exists(unpackPath + "/package.nw/package.json") && QFile::exists(unpackPath + "/package.nw/index.html"))
+
+            ) {
         QDEBUG() << "We are unpacked. I can do this";
         QString packageJSONString(packageJSONByteArray);
         QString indexHTMLString(indexHTMLByteArray);
@@ -496,24 +505,29 @@ bool HTML5Game::repack()
             }
         }
 
-        QFile packageJSON(unpackPath + "/package.json");
-        QFile indexHTML(unpackPath + "/" + xml.launchfile);
-
-        if(packageJSON.open(QIODevice::WriteOnly)) {
-            packageJSON.write(packageJSONString.toLatin1());
-            packageJSON.close();
-        } else {
-            QDEBUG() << "failed to open packageJSON";
-            return false;
-        }
+        if((!QFile::exists(unpackPath + "/package.nw/package.json") && !QFile::exists(unpackPath + "/package.nw/index.html"))) {
 
 
-        if(indexHTML.open(QIODevice::WriteOnly)) {
-            indexHTML.write(indexHTMLString.toLatin1());
-            indexHTML.close();
-        } else {
-            QDEBUG() << "failed to open indexHTML";
-            return false;
+            QFile packageJSON(unpackPath + "/package.json");
+            QFile indexHTML(unpackPath + "/" + xml.launchfile);
+
+            if(packageJSON.open(QIODevice::WriteOnly)) {
+                packageJSON.write(packageJSONString.toLatin1());
+                packageJSON.close();
+            } else {
+                QDEBUG() << "failed to open packageJSON";
+                return false;
+            }
+
+
+            if(indexHTML.open(QIODevice::WriteOnly)) {
+                indexHTML.write(indexHTMLString.toLatin1());
+                indexHTML.close();
+            } else {
+                QDEBUG() << "failed to open indexHTML";
+                return false;
+            }
+
         }
 
 

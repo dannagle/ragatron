@@ -225,18 +225,18 @@ void MainWindow::gameButtonChecks(HTML5Game * game) {
 
     if(game->isEXEValid()) {
         game->cheatTab->enableUnpack(true);
-        QDEBUG() << "I can unpack";
+        QDEBUG() << "I can unpack" << game->titleClean();
     } else {
         game->cheatTab->enableUnpack(false);
-        QDEBUG() << "I CANNOT unpack";
+        QDEBUG() << "I CANNOT unpack" << game->titleClean();
     }
 
     if(game->canRepack()) {
         game->cheatTab->enableRepack(true);
-        QDEBUG() << "I can repack";
+        QDEBUG() << "I can repack" << game->titleClean();
     } else {
         game->cheatTab->enableRepack(false);
-        QDEBUG() << "I CANNOT repack";
+        QDEBUG() << "I CANNOT repack" << game->titleClean();
     }
 }
 
@@ -338,6 +338,7 @@ void MainWindow::html5Pack(xml_t xml) {
             QDEBUGVAR(cmd);
             QProcess::startDetached(cmd);
 #else
+            QDEBUGVAR(fileInfo.canonicalFilePath());
             QDesktopServices::openUrl( fileInfo.canonicalFilePath());
 #endif
 
