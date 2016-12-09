@@ -12,5 +12,6 @@
         <file>cheats/gamedevtycoon.xml</file>
         <file>cheats/elliotquest.xml</file>
         <file>cheats/soulthief.xml</file>
+        <file>cheats/indiegamesim.xml</file>
     </qresource>
 </RCC>
