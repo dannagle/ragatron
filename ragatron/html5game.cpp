@@ -473,6 +473,12 @@ bool HTML5Game::repack()
 
 
                     QString otherFilesPath = unpackPath + "/" + gameHack.target;
+                    if(!QFile::exists(otherFilesPath)) {
+                        otherFilesPath = unpackPath + "/package.nw/" + gameHack.target;
+
+                    }
+
+
 
 #if __APPLE__
                     //read from the backup once
@@ -484,7 +490,7 @@ bool HTML5Game::repack()
 #else
                     //read from the backup once
                 if(otherFiles[otherFilesPath].isEmpty()) {
-                    otherFiles[otherFilesPath] = readFile(backupPath + "/" + gameHack.target);
+                    otherFiles[otherFilesPath] = readFile(otherFilesPath);
                 }
 
 #endif
