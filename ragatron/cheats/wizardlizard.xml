@@ -1,24 +1,16 @@
 <xml>
-    <title>AWL</title>
+    <title>A Wizard's Lizard</title>
     <windows>
-        <defaultpath>C:/Program Files (x86)/LostDecadeGames/WizardsLizard</defaultpath>
+        <defaultpath>C:/Program Files (x86)/Steam/steamapps/common/A Wizards Lizard</defaultpath>
         <md5>b8bdc04dd01363dc6989a20eff2f0718</md5>
-        <app_nw_is_compressed>1</app_nw_is_compressed>
-        <app_nw_is_hidden>1</app_nw_is_hidden>
-        <app_nw_bytelocation>39433216</app_nw_bytelocation>
-        <target>wizardslizard.exe</target>
-        <outputname>AWizardsLizardHacked.exe</outputname>
-        <launchfile>game.js</launchfile>
+        <target>package.nw/game.js</target>
+        <launchfile>wizardslizard.exe</launchfile>
     </windows>
     <mac>
-        <defaultpath>/Applications/A Wizard's Lizard.app</defaultpath>
-        <md5>20d90cb0b4bc5fc514bd846ff4d0a829</md5>
-        <app_nw_is_compressed>1</app_nw_is_compressed>
-        <app_nw_is_hidden>0</app_nw_is_hidden>
-        <app_nw_bytelocation>0</app_nw_bytelocation>
-        <target>Contents/Resources/app.nw</target>
-        <outputname>Contents/Resources/app.nw</outputname>
-        <launchfile>game.js</launchfile>
+        <defaultpath>~/Library/Application Support/Steam/steamapps/common/A Wizards Lizard/A Wizard's Lizard.app</defaultpath>
+        <md5>afc5e1e1315f966427ebd3042518dc07</md5>
+        <target>Contents/Resources/app.nw/game.js</target>
+        <launchfile>A Wizard's Lizard.app</launchfile>
     </mac>
     <linux>
     </linux>
@@ -27,16 +19,18 @@
         <platform>all</platform>
         <id>startwith1millionCheck</id>
         <name>Start with 1 Million Gold</name>
-        <target>game.js</target>
-        <search>getStartingGold:function(){var e=this.get("hostages",0);return d+e*d}</search>
-        <replace>getStartingGold:function(){var e=this.get("hostages",0);return 1000000+d+e*d}</replace>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
+        <search>getStartingGold:function(){var e=this.get("hostages",0);return m+e*m}</search>
+        <replace>getStartingGold:function(){var e=this.get("hostages",0);return 1e6+m+e*m}</replace>
     </hack>
     <hack>
         <category>Core Stats</category>
         <platform>all</platform>
         <id>fastDashCheck</id>
         <name>Fast Dash Cooldown</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>dashCooldown:5e3</search>
         <replace>dashCooldown:500</replace>
     </hack>
@@ -45,7 +39,8 @@
         <platform>all</platform>
         <id>fastSoulOrbCheck</id>
         <name>Fast Soul Orb Cooldown</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>soulCooldown:5e3</search>
         <replace>soulCooldown:500</replace>
     </hack>
@@ -55,7 +50,8 @@
         <platform>all</platform>
         <id>fastSkyrocketCheck</id>
         <name>Fast Skyrocket</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>"skyrocket",effects:{modifyStats:{attackCooldown:450}}}</search>
         <replace>"skyrocket",effects:{modifyStats:{attackCooldown:-50}}}</replace>
     </hack>
@@ -64,7 +60,8 @@
         <platform>all</platform>
         <id>quadSpearCheck</id>
         <name>Fast Quad Spear</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>spear:{status:1,intlKey:"ITEM_SPEAR",costBase:2500,slot:"weapon",prefabType:"spear"</search>
         <replace>spear:{status:1,intlKey:"ITEM_SPEAR",costBase:2500,slot:"weapon",prefabType:"spear",effects:{modifyStats:{projectileCount:3,attackCooldown:-150}}</replace>
     </hack>
@@ -73,7 +70,8 @@
         <platform>all</platform>
         <id>quadMagicBoomerang</id>
         <name>Fast Quad Magic Boomerang</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>boomerang2:{status:1,intlKey:"ITEM_BOOMERANG_2",costBase:1e4,slot:"weapon",prefabType:"boomerang2",effects:{modifyStats:{attackCooldown:1550}}}</search>
         <replace>boomerang2:{status:1,intlKey:"ITEM_BOOMERANG_2",costBase:1e4,slot:"weapon",prefabType:"boomerang2",effects:{modifyStats:{projectileCount:3,attackCooldown:550}}}</replace>
     </hack>
@@ -82,7 +80,8 @@
         <platform>all</platform>
         <id>quadTrident</id>
         <name>Fast Quad Trident</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>trident:{status:1,intlKey:"ITEM_TRIDENT",costBase:18e3,slot:"weapon",prefabType:"trident"}</search>
         <replace>trident:{status:1,intlKey:"ITEM_TRIDENT",costBase:18e3,slot:"weapon",prefabType:"trident",effects:{modifyStats:{projectileCount:3,attackCooldown:-100}}}</replace>
     </hack>
@@ -91,7 +90,8 @@
         <platform>all</platform>
         <id>spreadArthurLance</id>
         <name>Arthur's Lance Spraygun</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>lance:{status:1,intlKey:"ITEM_LANCE",costBase:1985,slot:"weapon",prefabType:"lance"}</search>
         <replace>lance:{status:1,intlKey:"ITEM_LANCE",costBase:1985,slot:"weapon",prefabType:"lance",effects:{modifyStats:{projectileSpread:Math.PI/8,projectileVariance:Math.PI/8,attackCooldown:-225}}}</replace>
     </hack>
@@ -100,7 +100,8 @@
         <platform>all</platform>
         <id>start5000healthCheck</id>
         <name>Raga and Engineer start with 5,000 health</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>{groups:["player"],targetGroups:["collectible"],solidGroups:["solid","mortalSolid","lightSolid"]},mortal:{bleeds:"bloodPuddle",healthMax:50,graceDuration</search>
         <replace>{groups:["player"],targetGroups:["collectible"],solidGroups:["solid","mortalSolid","lightSolid"]},mortal:{bleeds:"bloodPuddle",healthMax:5000,graceDuration</replace>
     </hack>
@@ -109,7 +110,8 @@
         <platform>all</platform>
         <id>fastTotemCheck</id>
         <name>Fast Totem Cooldown</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>Distance);var o=2e4-1e3*r.totemPower</search>
         <replace>Distance);var o=2e3-1e3*r.totemPower</replace>
     </hack>
@@ -118,7 +120,8 @@
         <platform>all</platform>
         <id>startwith5000orbsCheck</id>
         <name>Start with 5,000 soul orbs</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>items:{soulOrb:3}},stats:{}</search>
         <replace>items:{soulOrb:5000}},stats:{}</replace>
     </hack>
@@ -127,7 +130,8 @@
         <platform>all</platform>
         <id>ragaOwlSlayer</id>
         <name>Start with OwlSlayer</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>raga:{inventory:{equipment:{weapon:"sword"</search>
         <replace>raga:{inventory:{equipment:{weapon:"owlslayer"</replace>
 	
@@ -137,7 +141,8 @@
         <platform>all</platform>
         <id>ragaSkythe</id>
         <name>Start with Magic Boomerang</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>raga:{inventory:{equipment:{weapon:"sword"</search>
         <replace>raga:{inventory:{equipment:{weapon:"boomerang2"</replace>
     </hack>
@@ -146,7 +151,8 @@
         <platform>all</platform>
         <id>ragakillerBees</id>
         <name>Start with Killer Bees</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>raga:{inventory:{equipment:{weapon:"sword"</search>
         <replace>raga:{inventory:{equipment:{weapon:"killerBees"</replace>
 
@@ -156,7 +162,8 @@
         <platform>all</platform>
         <id>ragaStartArthurLance</id>
         <name>Start with Arthur's Lance</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>raga:{inventory:{equipment:{weapon:"sword"</search>
         <replace>raga:{inventory:{equipment:{weapon:"lance"</replace>
     </hack>
@@ -165,7 +172,8 @@
         <platform>all</platform>
         <id>ragaStartSlowrd</id>
         <name>Start with Slowrd</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>raga:{inventory:{equipment:{weapon:"sword"</search>
         <replace>raga:{inventory:{equipment:{weapon:"slowrd"</replace>
     </hack>
@@ -177,7 +185,8 @@
         <platform>all</platform>
         <id>ragaStartCopycatTotem</id>
         <name>Start with Copycat Totem</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>totem:"lightTotem",soul:"soulBlast"},items:{soulOrb</search>
         <replace>totem:"copycatTotem",soul:"soulBlast"},items:{soulOrb</replace>
     </hack>
@@ -186,7 +195,8 @@
         <platform>all</platform>
         <id>ragaStartspeedFinger</id>
         <name>Start with Ring of Speed</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>raga:{inventory:{equipment:{weapon:</search>
         <replace>raga:{inventory:{equipment:{finger:"speedFinger",weapon:</replace>
     </hack>
@@ -195,7 +205,8 @@
         <platform>all</platform>
         <id>wizardStart5000Health</id>
         <name>Wizard starts with 5000 health</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>mortal:{bleeds:"bloodPuddle",healthMax:30,graceDuration:1350</search>
         <replace>mortal:{bleeds:"bloodPuddle",healthMax:5000,graceDuration:1350</replace>
     </hack>
@@ -204,7 +215,8 @@
         <platform>all</platform>
         <id>lunaStart5000Health</id>
         <name>Luna starts with 5000 health</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>mortal:{bleeds:"bloodPuddle",healthMax:70,graceDuration:1350</search>
         <replace>mortal:{bleeds:"bloodPuddle",healthMax:5000,graceDuration:1350</replace>
     </hack>
@@ -213,7 +225,8 @@
         <platform>all</platform>
         <id>motoStart5000Health</id>
         <name>Moto starts with 5000 health</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>mortal:{bleeds:"bloodPuddle",healthMax:60,graceDuration:1350</search>
         <replace>mortal:{bleeds:"bloodPuddle",healthMax:5000,graceDuration:1350</replace>
     </hack>
@@ -223,7 +236,8 @@
         <platform>all</platform>
         <id>xamStart5000Health</id>
         <name>Xam starts with 5000 health</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>mortal:{bleeds:"bloodPuddle",healthMax:40,graceDuration:1350</search>
         <replace>mortal:{bleeds:"bloodPuddle",healthMax:5000,graceDuration:1350</replace>
     </hack>
@@ -234,7 +248,8 @@
         <platform>all</platform>
         <id>enableDeveloperCheck</id>
         <name>Expose Developer Tools (Use Caution)</name>
-        <target>package.json</target>
+        <mactarget>Contents/Resources/app.nw/package.json</mactarget>
+        <wintarget>package.nw/package.json</wintarget>
         <search>"toolbar": false</search>
         <replace>"toolbar": true</replace>
     </hack>

@@ -57,6 +57,7 @@ private slots:
 
     void gotoDanNagleTwitter();
     void gotoRagatron();
+    void gotoGithub();
     void on_launchUnpackFolderButton_clicked();
 
 

@@ -25,22 +25,14 @@ public:
 
     xml_t xml;
 
-    QByteArray gameByteArray;
-    QByteArray packageJSONByteArray;
-    QByteArray indexHTMLByteArray;
-    QByteArray nwEXEByteArray;
-    QByteArray appNWByteArray;
-    quint64 exeBYTELocation;
-
+    QByteArray gameJSArray;
     QString packPath;
     QString unpackPath;
-    QString indexHTMLBackup;
-    QString packageJSONBackup;
     QString backupPath;
 
     QString titleClean();
 
-    bool isEXEValid();
+    bool isJSValid();
     bool canRepack();
     bool scanXML(QString xmlFile);
     bool unpack();

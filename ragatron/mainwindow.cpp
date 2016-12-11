@@ -34,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
     int reply = QMessageBox::question(this, "This tool violates Steam's ToS"
-         , "This tool violates Steam's ToS. Though Lost Decade Games is willing to ignore it, Steam might not.\n\n\nDo you feel lucky?",
+         , "This tool violates Steam's ToS. \n\nThough Lost Decade Games said they'll ignore this (for now), Steam might not.\n\n\nDo you feel lucky?",
                                 QMessageBox::Yes|QMessageBox::No);
     if (reply == QMessageBox::No) {
         QDEBUG() <<"Quitting";
@@ -114,13 +114,20 @@ MainWindow::MainWindow(QWidget *parent) :
     nagleCodeButton->setCursor(Qt::PointingHandCursor);
     nagleCodeButton->setIcon(QIcon("://Twitter_logo_blue.png"));
 
-    connect(nagleCodeButton, SIGNAL(clicked()),
-            this, SLOT(gotoDanNagleTwitter()));
+    QPushButton * githubButton = new QPushButton("GitHub");
+    githubButton->setStyleSheet("QPushButton { color: black; } QPushButton::hover { color: #BC810C; } ");
+    githubButton->setFlat(true);
+    githubButton->setCursor(Qt::PointingHandCursor);
+    githubButton->setIcon(QIcon("://GitHub-Mark-64px.png"));
+
+    connect(githubButton, SIGNAL(clicked()),
+            this, SLOT(gotoGithub()));
 
 
 
     statusBar()->insertPermanentWidget(0, RagatronButton);
     statusBar()->insertPermanentWidget(1, nagleCodeButton);
+    statusBar()->insertPermanentWidget(2, githubButton);
 
 
     QDir mdir;
@@ -160,12 +167,6 @@ MainWindow::MainWindow(QWidget *parent) :
             }
         }
     } else {
-        // load internal list
-        HTML5Game * soulthiefHTML5 = new HTML5Game();
-        scansuccess = soulthiefHTML5->scanXML(":/cheats/soulthief.xml");
-        if(scansuccess) {
-            html5GameList.append(soulthiefHTML5);
-        }
 
         // load internal list
         HTML5Game * indiegamesimHTML5 = new HTML5Game();
@@ -175,31 +176,19 @@ MainWindow::MainWindow(QWidget *parent) :
         }
 
 
+        // load internal list
+        HTML5Game * soulthiefHTML5 = new HTML5Game();
+        scansuccess = soulthiefHTML5->scanXML(":/cheats/soulthief.xml");
+        if(scansuccess) {
+            html5GameList.append(soulthiefHTML5);
+        }
+
+
+        // load internal list
         HTML5Game * wizardlizardHTML5 = new HTML5Game();
         scansuccess = wizardlizardHTML5->scanXML(":/cheats/wizardlizard.xml");
         if(scansuccess) {
             html5GameList.append(wizardlizardHTML5);
-        }
-
-        HTML5Game * lavabladeHTML5 = new HTML5Game();
-        html5GameList.append(lavabladeHTML5);
-        scansuccess = lavabladeHTML5->scanXML(":/cheats/lavablade.xml");
-        if(scansuccess) {
-            html5GameList.append(lavabladeHTML5);
-        }
-
-        HTML5Game * gamedevTycoonHTML5 = new HTML5Game();
-        html5GameList.append(gamedevTycoonHTML5);
-        scansuccess = gamedevTycoonHTML5->scanXML(":/cheats/gamedevtycoon.xml");
-        if(scansuccess) {
-            html5GameList.append(gamedevTycoonHTML5);
-        }
-
-        // load internal list
-        HTML5Game * elliotQuestHTML5 = new HTML5Game();
-        scansuccess = elliotQuestHTML5->scanXML(":/cheats/elliotquest.xml");
-        if(scansuccess) {
-            html5GameList.append(elliotQuestHTML5);
         }
 
 
@@ -238,7 +227,7 @@ MainWindow::MainWindow(QWidget *parent) :
 void MainWindow::gameButtonChecks(HTML5Game * game) {
 
 
-    if(game->isEXEValid()) {
+    if(game->isJSValid()) {
         game->cheatTab->enableUnpack(true);
         QDEBUG() << "I can unpack" << game->titleClean();
     } else {
@@ -409,6 +398,16 @@ void MainWindow::gotoDanNagleTwitter()
     QDesktopServices::openUrl(QUrl("https://twitter.com/NagleCode"));
 
 }
+
+
+void MainWindow::gotoGithub()
+{
+
+    //Open URL in browser
+    QDesktopServices::openUrl(QUrl("https://github.com/dannagle/ragatron"));
+
+}
+
 
 QPushButton *MainWindow::generateDNLink()
 {

@@ -8,6 +8,8 @@ typedef struct hack {
     QString id;
     QString name;
     QString target;
+    QString mactarget;
+    QString wintarget;
     QString search;
     QString replace;
 } hack_t;
@@ -16,9 +18,6 @@ typedef struct xml {
     QString title;
     QString defaultpath;
     QString md5;
-    int app_nw_is_compressed;
-    int app_nw_is_hidden;
-    QString app_nw_bytelocation;
     QString target;
     QString outputname;
     QString launchfile;

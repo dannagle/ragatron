@@ -3,22 +3,14 @@
     <windows>
         <defaultpath>C:/Program Files (x86)/Steam/steamapps/common/Soul Thief</defaultpath>
         <md5>b8bdc04dd01363dc6989a20eff2f0718</md5>
-        <app_nw_is_compressed>0</app_nw_is_compressed>
-        <app_nw_is_hidden>0</app_nw_is_hidden>
-        <app_nw_bytelocation>39433216</app_nw_bytelocation>
-        <target>soulthief.exe</target>
-        <outputname>ASoulThief.exe</outputname>
-        <launchfile>game.js</launchfile>
+        <target>package.nw/game.js</target>
+        <launchfile>nw.exe</launchfile>
     </windows>
     <mac>
         <defaultpath>~/Library/Application Support/Steam/steamapps/common/Soul Thief/SoulThief.app</defaultpath>
         <md5>9713f18e6e61bcf96320be7583aea6be</md5>
-        <app_nw_is_compressed>0</app_nw_is_compressed>
-        <app_nw_is_hidden>0</app_nw_is_hidden>
-        <app_nw_bytelocation>0</app_nw_bytelocation>
         <target>Contents/Resources/app.nw/game.js</target>
-        <outputname>Contents/Resources/app.nw/game.js</outputname>
-        <launchfile>game.js</launchfile>
+        <launchfile>SoulThief.app</launchfile>
     </mac>
     <linux>
     </linux>
@@ -28,7 +20,8 @@
         <platform>all</platform>
         <id>startwith15Hearts</id>
         <name>Start with 15 Hearts</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>mortal:{bleeds:"bloodPuddle",healthMax:5,graceDu</search>
         <replace>mortal:{bleeds:"bloodPuddle",healthMax:15,graceDu</replace>
     </hack>
@@ -37,7 +30,8 @@
         <platform>all</platform>
         <id>startwith1000Gold</id>
         <name>Start with 1 million gold</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>layerType:"raga",currentLevel:"library1",stats:{meleeDamageBonus:0},resources:{gold:0,key</search>
         <replace>layerType:"raga",currentLevel:"library1",stats:{meleeDamageBonus:0},resources:{gold:1e6,key</replace>
     </hack>
@@ -46,7 +40,8 @@
         <platform>all</platform>
         <id>startwith1000Keys</id>
         <name>Start with 1000 small keys</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>,key:0,bigKey:</search>
         <replace>,key:1000,bigKey:</replace>
     </hack>
@@ -55,7 +50,8 @@
         <platform>all</platform>
         <id>startwith1000BigKeys</id>
         <name>Start with 1000 big keys</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>bigKey:0},gear:{},items:[],elapsedT</search>
         <replace>bigKey:1000},gear:{},items:[],elapsedT</replace>
     </hack>
@@ -66,7 +62,7 @@
         <platform>all</platform>
         <id>startwith10000PrizeTickets1</id>
         <name>Start with 10,000 prize tickets 1</name>
-        <target>game.js</target>
+        <target>Contents/Resources/app.nw/game.js</target>
         <search>tickets:0,toyPatterns</search>
         <replace>tickets:1e4,toyPatterns</replace>
     </hack>
@@ -76,7 +72,7 @@
         <platform>all</platform>
         <id>startwith10000PrizeTickets2</id>
         <name>Start with 10,000 prize tickets 2</name>
-        <target>game.js</target>
+        <target>Contents/Resources/app.nw/game.js</target>
         <search>level:1,toys:[],tickets:0,saveSession</search>
         <replace>level:1,toys:[],tickets:1e4,saveSession</replace>
     </hack>
@@ -86,7 +82,8 @@
         <platform>all</platform>
         <id>startwith10000BonusTickets</id>
         <name>10,000 bonus prize tickets</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>getTickets:function(){return this.data.lifetime.tickets}</search>
         <replace>getTickets:function(){return (this.data.lifetime.tickets+1e4)}</replace>
     </hack>
@@ -98,7 +95,8 @@
         <platform>all</platform>
         <id>superStrongMeleeST</id>
         <name>Super Strong Melee</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>currentLevel:"library1",stats:{meleeDamageBonus:0}</search>
         <replace>currentLevel:"library1",stats:{meleeDamageBonus:10}</replace>
     </hack>
@@ -109,7 +107,8 @@
         <platform>all</platform>
         <id>startwithGearST</id>
         <name>Start with gear</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>,gear:{},items:[],elapsedTime:0</search>
         <replace>,gear:{},items:[],elapsedTime:0</replace>
     </hack>
@@ -120,7 +119,8 @@
         <platform>all</platform>
         <id>showHitBoxes</id>
         <name>Show Div Containers</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>cancelInputEvents:!1,debug:!1,rotation:0,</search>
         <replace>cancelInputEvents:!1,debug:1,rotation:0,</replace>
     </hack>
@@ -130,7 +130,7 @@
         <platform>all</platform>
         <id>noclippingST</id>
         <name>No Clipping Mode</name>
-        <target>game.js</target>
+        <target>Contents/Resources/app.nw/game.js</target>
         <search>clip:!1,width:0,height:0,scaleX</search>
         <replace>clip:1,width:0,height:0,scaleX</replace>
     </hack>

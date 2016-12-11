@@ -3,22 +3,14 @@
     <windows>
         <defaultpath>C:/Program Files (x86)/Steam/steamapps/common/Indie Game Sim</defaultpath>
         <md5>ede3471bf62832e9b9a7f8ba391b17a8</md5>
-        <app_nw_is_compressed>0</app_nw_is_compressed>
-        <app_nw_is_hidden>0</app_nw_is_hidden>
-        <app_nw_bytelocation>0</app_nw_bytelocation>
-        <target>igs.exe</target>
-        <outputname>igs.exe</outputname>
+        <target>package.nw/game.js</target>
         <launchfile>igs.exe</launchfile>
     </windows>
     <mac>
         <defaultpath>~/Library/Application Support/Steam/steamapps/common/Indie Game Sim/igs.app</defaultpath>
         <md5>d73d8389e1f1ef6c060e0993e061cdfd</md5>
-        <app_nw_is_compressed>0</app_nw_is_compressed>
-        <app_nw_is_hidden>0</app_nw_is_hidden>
-        <app_nw_bytelocation>0</app_nw_bytelocation>
         <target>Contents/Resources/app.nw/game.js</target>
-        <outputname>Contents/Resources/app.nw/game.js</outputname>
-        <launchfile>game.js</launchfile>
+        <launchfile>igs.app</launchfile>
     </mac>
     <linux>
     </linux>
@@ -29,7 +21,8 @@
     <platform>all</platform>
     <id>igsSpikesCheap</id>
     <name>Spikes is cheap.</name>
-    <target>game.js</target>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
     <search>,price:2e3,editEntity:"spikes"}</search>
     <replace>,price:23,editEntity:"spikes"}</replace>
 </hack>
@@ -39,7 +32,8 @@
     <platform>all</platform>
     <id>igsBeaconCheap</id>
     <name>Beacon is cheap.</name>
-    <target>game.js</target>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
     <search>,price:1e4,editEntity:"pulseButton"</search>
     <replace>,price:14,editEntity:"pulseButton"</replace>
 </hack>
@@ -49,7 +43,8 @@
     <platform>all</platform>
     <id>igsBossBlockCheap</id>
     <name>Boss Block is cheap.</name>
-    <target>game.js</target>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
     <search>,price:15e3,editEntity:"bossBlock"</search>
     <replace>,price:153,editEntity:"bossBlock"</replace>
 </hack>
@@ -60,7 +55,8 @@
     <platform>all</platform>
     <id>igsRockTileCheap</id>
     <name>Rock Tile is cheap.</name>
-    <target>game.js</target>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
     <search>,price:1e3,tileIndex:9}</search>
     <replace>,price:13,tileIndex:9}</replace>
 </hack>
@@ -70,7 +66,8 @@
     <platform>all</platform>
     <id>igsSandTileCheap</id>
     <name>Sand Tile is cheap.</name>
-    <target>game.js</target>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
     <search>,price:2e3,tileIndex:10}</search>
     <replace>,price:23,tileIndex:10}</replace>
 </hack>
@@ -80,7 +77,8 @@
     <platform>all</platform>
     <id>igsBrickTileCheap</id>
     <name>Brick Tile is cheap.</name>
-    <target>game.js</target>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
     <search>},price:4e3,tileIndex:11}</search>
     <replace>},price:43,tileIndex:11}</replace>
 </hack>
@@ -90,7 +88,8 @@
         <platform>all</platform>
         <id>igsBlueTileCheap</id>
         <name>Blue Tile is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>,price:8e3,tileIndex:12}</search>
         <replace>,price:81,tileIndex:12}</replace>
     </hack>
@@ -100,7 +99,8 @@
         <platform>all</platform>
         <id>igsWoodenTileCheap</id>
         <name>Wooden Tile is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>price:16e3,tileIndex:13</search>
         <replace>price:12,tileIndex:13</replace>
     </hack>
@@ -111,7 +111,8 @@
         <platform>all</platform>
         <id>igsOvergrownTileCheap</id>
         <name>Overgrown Tile is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>16},price:32e3,tileIndex:14</search>
         <replace>16},price:22,tileIndex:14</replace>
     </hack>
@@ -122,7 +123,8 @@
         <platform>all</platform>
         <id>igsScaryTileCheap</id>
         <name>Scary Tile is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>price:64e3,tileIndex:15</search>
         <replace>price:22,tileIndex:15</replace>
     </hack>
@@ -133,7 +135,8 @@
     <platform>all</platform>
     <id>igsSecurityCamCheap</id>
     <name>Security Camera is cheap.</name>
-    <target>game.js</target>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
     <search>,price:3e3,flag:"securityCamera"}</search>
     <replace>,price:33,flag:"securityCamera"}</replace>
 </hack>
@@ -143,7 +146,8 @@
         <platform>all</platform>
         <id>igsMotorcycleCheap</id>
         <name>Motorcycle is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>,price:2e4,flag:"rlMotorcycle"}</search>
         <replace>,price:24,flag:"rlMotorcycle"}</replace>
     </hack>
@@ -153,7 +157,8 @@
         <platform>all</platform>
         <id>igsGarageCheap</id>
         <name>Garage is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>price:15e4,flag:"rlGarage"</search>
         <replace>price:1e2,flag:"rlGarage"</replace>
     </hack>
@@ -164,7 +169,8 @@
         <platform>all</platform>
         <id>igsCheapHouse</id>
         <name>House is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>price:35e4,flag:"rlHouse"</search>
         <replace>price:3e2,flag:"rlHouse"</replace>
     </hack>
@@ -175,7 +181,8 @@
         <platform>all</platform>
         <id>igsGivingTreeCheap</id>
         <name>Giving Tree is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>price:1e5,flag:"rlTree"</search>
         <replace>price:1e2,flag:"rlTree"</replace>
     </hack>
@@ -185,7 +192,8 @@
         <platform>all</platform>
         <id>igsBeehiveCheap</id>
         <name>Beehive is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>price:1e4,flag:"rlBeehive"</search>
         <replace>price:1e2,flag:"rlBeehive"</replace>
     </hack>
@@ -195,7 +203,8 @@
         <platform>all</platform>
         <id>igsCheapSlide</id>
         <name>Waterslide is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>price:25e4,flag:"rlWaterslide"</search>
         <replace>price:2e2,flag:"rlWaterslide"</replace>
     </hack>
@@ -206,7 +215,8 @@
         <platform>all</platform>
         <id>igsCheapHelipad</id>
         <name>Helicopter Pad is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>0},price:1e6,flag:"rlChopperPad"</search>
         <replace>0},price:1e2,flag:"rlChopperPad"</replace>
     </hack>
@@ -216,7 +226,8 @@
         <platform>all</platform>
         <id>igsCheapHelicopter</id>
         <name>Helicopter is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>price:1e6,flag:"rlChopper"</search>
         <replace>price:1e2,flag:"rlChopper"</replace>
     </hack>
@@ -227,7 +238,8 @@
         <platform>all</platform>
         <id>igsCheapAirship</id>
         <name>Airship is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>0},price:3e6,flag:"rlAirship"</search>
         <replace>0},price:3e2,flag:"rlAirship"</replace>
     </hack>
@@ -237,7 +249,8 @@
         <platform>all</platform>
         <id>igsCheapTower</id>
         <name>Tower of ID is cheap.</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search>price:1e7,flag:"rlTower"}</search>
         <replace>price:1e2,flag:"rlTower"}</replace>
     </hack>
@@ -248,7 +261,8 @@
     <platform>all</platform>
     <id>igsBackgroundCheap</id>
     <name>Background Color is cheap.</name>
-    <target>game.js</target>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
     <search>,price:25e3,flag:"backgroundColor"}</search>
     <replace>,price:23,flag:"backgroundColor"}</replace>
 </hack>
@@ -259,7 +273,8 @@
         <platform>all</platform>
         <id>igsCheaperPublish</id>
         <name>Games cost less to publish</name>
-        <target>game.js</target>
+        <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+        <wintarget>package.nw/game.js</wintarget>
         <search><![CDATA[getGameTotalCost:function(e){var t=0,n=e.tiles;for(var r=0;r<n.length;++r)for(var i=0;i<n[r].length;++i){var s=n[r][i],o=m[s]||0;t+=o}return t}]]></search>
         <replace><![CDATA[getGameTotalCost:function(e){var t=0,n=e.tiles;for(var r=0;r<n.length;++r)for(var i=0;i<n[r].length;++i){var s=n[r][i],o=m[s]||0;t+=o}return (t/1000)}]]></replace>
     </hack>
@@ -270,7 +285,8 @@
     <platform>all</platform>
     <id>igsAnnieCheap</id>
     <name>Annie is cheap</name>
-    <target>game.js</target>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
     <search>,price:5e3,flag:"playerGirl"}</search>
     <replace>,price:53,flag:"playerGirl"}</replace>
 </hack>
@@ -280,7 +296,8 @@
     <platform>all</platform>
     <id>igsMattCheap</id>
     <name>Matt is cheap</name>
-    <target>game.js</target>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
     <search>,price:5e3,flag:"playerBoy"</search>
     <replace>,price:53,flag:"playerBoy"</replace>
 </hack>
