@@ -228,11 +228,6 @@ bool HTML5Game::scanXML(QString xmlFile) {
     }
 
     exeBYTELocation = xml.app_nw_bytelocation.toULongLong();
-
-
-
-    indexHTMLBackup = SETTINGSPATH + xml.md5 + "/index.html.backup";
-    packageJSONBackup = SETTINGSPATH + xml.md5 + "/package.json.backup";
     backupPath = QString(SETTINGSPATH + xml.md5);
 
     if(QFile::exists(xml.defaultpath)) {

@@ -19,6 +19,7 @@ It is licensed GPL v2 or later.
 #include <QDate>
 #include <QPixmap>
 #include <QBuffer>
+#include <QTimer>
 
 
 #include "quazip/quazip.h"
@@ -31,6 +32,18 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+
+    int reply = QMessageBox::question(this, "This tool violates Steam's ToS"
+         , "This tool violates Steam's ToS. Though Lost Decade Games is willing to ignore it, Steam might not.\n\n\nDo you feel lucky?",
+                                QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::No) {
+        QDEBUG() <<"Quitting";
+        QTimer::singleShot(0, this, SLOT(close()));
+        return;
+    }
+
+
+
     ui->setupUi(this);
 
     ui->menuBar->hide();
@@ -43,6 +56,8 @@ MainWindow::MainWindow(QWidget *parent) :
 #else
     this->setFixedSize(this->width(),this->height());
 #endif
+
+
 
 
     //setSizeGripEnabled( false ) ;
