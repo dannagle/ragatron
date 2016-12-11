@@ -343,7 +343,7 @@ void MainWindow::html5Pack(xml_t xml) {
         msgBox.setDefaultButton(QMessageBox::No);
 //        msgBox.setIcon(QMessageBox::Question);
         msgBox.setIconPixmap(QPixmap ("://dannagle_logo_fadewhite.png"));
-        msgBox.setText("Success! \n\nLaunch game?");
+        msgBox.setText("Success! \n\nLaunch game? \n\nMake sure Steam is running!");
         int yesno = msgBox.exec();
         if(yesno == QMessageBox::Yes) {
 
