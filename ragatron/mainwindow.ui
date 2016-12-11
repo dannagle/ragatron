@@ -51,12 +51,9 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label">
-      <property name="styleSheet">
-       <string notr="true">color:rgb(170, 0, 0);font-weight:bold;</string>
-      </property>
+     <widget class="QPushButton" name="lostcastButton">
       <property name="text">
-       <string>Ragatron is not affiliated nor supported by Lost Decade Games.</string>
+       <string>Listen to the Lostcast Podcast!</string>
       </property>
      </widget>
     </item>

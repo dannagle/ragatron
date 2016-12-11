@@ -99,7 +99,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->gameChoiceTabs->setCurrentIndex(0);
 
-    QPushButton * RagatronButton = new QPushButton("Ragatron.com");
+    QPushButton * RagatronButton = new QPushButton("Ragatron");
     RagatronButton->setStyleSheet("QPushButton { color: black; } QPushButton::hover { color: #BC810C; } ");
     RagatronButton->setFlat(true);
     RagatronButton->setCursor(Qt::PointingHandCursor);
@@ -125,9 +125,20 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
 
+    QPushButton * ldgButton = new QPushButton("LDG");
+    ldgButton->setStyleSheet("QPushButton { color: black; } QPushButton::hover { color: #BC810C; } ");
+    ldgButton->setFlat(true);
+    ldgButton->setCursor(Qt::PointingHandCursor);
+    ldgButton->setIcon(QIcon("://ldg.jpg"));
+
+    connect(ldgButton, SIGNAL(clicked()),
+            this, SLOT(gotoLDG()));
+
+
     statusBar()->insertPermanentWidget(0, RagatronButton);
     statusBar()->insertPermanentWidget(1, nagleCodeButton);
     statusBar()->insertPermanentWidget(2, githubButton);
+    statusBar()->insertPermanentWidget(3, ldgButton);
 
 
     QDir mdir;
@@ -408,6 +419,14 @@ void MainWindow::gotoGithub()
 
 }
 
+void MainWindow::gotoLDG()
+{
+
+    //Open URL in browser
+    QDesktopServices::openUrl(QUrl("http://www.lostdecadegames.com/"));
+
+}
+
 
 QPushButton *MainWindow::generateDNLink()
 {
@@ -505,3 +524,8 @@ void MainWindow::playMP3()
 
 }
 
+
+void MainWindow::on_lostcastButton_clicked()
+{
+    QDesktopServices::openUrl(QUrl("http://ragatron.com/lostcast.php"));
+}

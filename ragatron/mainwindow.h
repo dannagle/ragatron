@@ -67,6 +67,9 @@ private slots:
 
     //void on_playLostcastButton_clicked();
 
+    void on_lostcastButton_clicked();
+
+    void gotoLDG();
 private:
     Ui::MainWindow *ui;
 };
