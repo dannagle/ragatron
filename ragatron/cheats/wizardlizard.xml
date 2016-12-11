@@ -2,9 +2,9 @@
     <title>A Wizard's Lizard</title>
     <windows>
         <defaultpath>C:/Program Files (x86)/Steam/steamapps/common/A Wizards Lizard</defaultpath>
-        <md5>b8bdc04dd01363dc6989a20eff2f0718</md5>
+        <md5>4eb72a54b5f7515da1253f16e591f720</md5>
         <target>package.nw/game.js</target>
-        <launchfile>wizardslizard.exe</launchfile>
+        <launchfile>nw.exe</launchfile>
     </windows>
     <mac>
         <defaultpath>~/Library/Application Support/Steam/steamapps/common/A Wizards Lizard/A Wizard's Lizard.app</defaultpath>

@@ -2,7 +2,7 @@
     <title>Indie Game Sim</title>
     <windows>
         <defaultpath>C:/Program Files (x86)/Steam/steamapps/common/Indie Game Sim</defaultpath>
-        <md5>ede3471bf62832e9b9a7f8ba391b17a8</md5>
+        <md5>d73d8389e1f1ef6c060e0993e061cdfd</md5>
         <target>package.nw/game.js</target>
         <launchfile>igs.exe</launchfile>
     </windows>

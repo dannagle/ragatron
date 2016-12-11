@@ -353,8 +353,8 @@ void MainWindow::html5Pack(xml_t xml) {
             QDEBUGVAR(cmd);
             QProcess::startDetached(cmd);
 #else
-            QDEBUGVAR(fileInfo.canonicalFilePath());
-            QDesktopServices::openUrl( fileInfo.canonicalFilePath());
+            QDEBUGVAR(fileInfo.canonicalFilePath() +"/" + game->xml.launchfile);
+            QDesktopServices::openUrl( fileInfo.canonicalFilePath() +"/" + game->xml.launchfile);
 #endif
 
 

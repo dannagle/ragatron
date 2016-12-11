@@ -2,7 +2,7 @@
     <title>Soul Thief</title>
     <windows>
         <defaultpath>C:/Program Files (x86)/Steam/steamapps/common/Soul Thief</defaultpath>
-        <md5>b8bdc04dd01363dc6989a20eff2f0718</md5>
+        <md5>9713f18e6e61bcf96320be7583aea6be</md5>
         <target>package.nw/game.js</target>
         <launchfile>nw.exe</launchfile>
     </windows>
