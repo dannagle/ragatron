@@ -15,9 +15,6 @@ It is licensed GPL v2 or later.
 #include <QDesktopServices>
 #include <QUrl>
 
-#include "quazip/quazip.h"
-#include "quazip/quazipfile.h"
-#include "quazip/JlCompress.h"
 
 #include "html5game.h"
 

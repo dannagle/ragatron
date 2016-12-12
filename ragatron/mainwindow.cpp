@@ -22,11 +22,6 @@ It is licensed GPL v2 or later.
 #include <QTimer>
 
 
-#include "quazip/quazip.h"
-#include "quazip/quazipfile.h"
-#include "quazip/JlCompress.h"
-
-
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
