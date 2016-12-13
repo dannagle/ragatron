@@ -4,7 +4,7 @@ Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's 
 
 ![AWL hack screenshot](githubscreenshots/hacked_awl_crop.jpg)
 
-This project is not officially supported by Lost Decade Games. However, *you* can officially support indie game developers by purchasing (multiple!) copies of their games to hack with this tool! ;-)
+Ragatron is not officially supported by Lost Decade Games. However, *you* can officially support indie game developers by purchasing (multiple!) copies of their games to hack with this tool! ;-)
 
 ** Note that using this tool violates Steam's ToS! **
 
@@ -58,7 +58,7 @@ If you would like to cheat in the game, those are available through the Ragatron
 
 - [Qt 5.6](http://www.qt.io/) SDK. The tested versions are compiled using MinGW bundled with Qt.
 
-- QuaZIP has been removed. It is not needed for these games. 
+- QuaZIP has been removed. It is not needed for these games.
 
 ### Expanding the Cheats
 
