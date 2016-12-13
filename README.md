@@ -1,29 +1,21 @@
 # Ragatron
 
-Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's Lizard](http://www.wizardslizard.com) and [Lava Blade](http://www.lavablade.com) developed by [Lost Decade Games](http://www.lostdecadegames.com). It also targets [Game Dev Tycoon](http://www.greenheartgames.com/app/game-dev-tycoon/) by [Greenheart Games](http://www.greenheartgames.com) and [Elliot Quest](http://elliotquest.com/) by [Ansimuz Games](http://ansimuz.com/). It is available for Windows and (Intel-based) Mac. The only targeted versions are copies purchased from the Humble Store.
+Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's Lizard](http://www.wizardslizard.com), [Indie Game Sim](http://www.indiegamesim.com), and [Soul Thief](http://www.wizardslizard.com) developed by [Lost Decade Games](http://www.lostdecadegames.com). It is available for Windows and (Intel-based) Mac. The only targeted versions are the currently shipping versions purchased from Steam.
 
-![AWL hack screenshot](githubscreenshots/hacked_awl_crop.jpg) ![LB hack screenshot](githubscreenshots/lavablade_hack_crop.jpg)
+![AWL hack screenshot](githubscreenshots/hacked_awl_crop.jpg)
 
-<img src="githubscreenshots/largebooth_cheap.png" alt="GDT hack screenshot" width="500px" >
+This project is not officially supported by Lost Decade Games. However, *you* can officially support indie game developers by purchasing (multiple!) copies of their games to hack with this tool! ;-)
 
-
-<img src="githubscreenshots/hacked_elliotquest.png" alt="Elliot Quest hack" width="500px" >
-
-This project is not officially supported by Lost Decade Games, Greenheart Games, nor Ansimuz Games. However, *you* can officially support indie game developers by purchasing (multiple!) copies of their games to hack with this tool! ;-)
-
-
+** Note that using this tool violates Steam's ToS! **
 
 ## Download
 
 Ragatron can be downloaded at  [Ragatron.com](http://ragatron.com/)
 
-
-<img src="githubscreenshots/ragatron_screenshot.png" alt="Ragatron GUI" width="500px" >
+![Ragatron UI](githubscreenshots/ragatron_ui.png)
 
 
 ## Built-in Hacks for A Wizard's Lizard
-The only supported build is Humble Bundle version 2015-05-07
-
 
 - Start with 1 million gold
 - Start with 5,000 health
@@ -35,47 +27,23 @@ The only supported build is Humble Bundle version 2015-05-07
 - Raga start with various items
 
 
-## Built-in Hacks for Lava Blade
-The only supported build is the version on Humble Bundle.
-
-- Healing at camp costs 1 gold
-- Lars has extra movement
-- Luna has extra attack
-- Seraph has extra health
-- Sobek has extra magic
-- Blitz has extra movement, attack, and health
-- Earn more gold
-- Expose Developer Tools
+## Built-in Hacks for Indie Game Sim
+- All the items in the store are cheaper
+- Publishing games is cheaper
 
 
 
+## Built-in Hacks for Soul Thief
+Since this is early access, breaking changes are frequent.
 
-## Built-in Hacks for Game Dev Tycoon
-The only supported build is Humble Bundle version 2014-09-17
-
-- Contracts pay 100x
-- Research Points grow much faster
-- Large G3 Booth is cheap
-- Code Incomplete is Awesome!
-- Expose Developer Tools
-
-
-
-
-
-## Built-in Hacks for Elliot Quest
-The only supported build is Humble Bundle version 2015-03-25
-
-- Start with 16 hearts
-- Jump Higher
-- Stronger Arrow
-- Chest has 500 coins
-- Whirlwind is cheap
-- Flame is cheap
-- Rock is cheap
-- Ice is cheap
-- Expose Developer Tools
-
+- Start with 15 hearts
+- Start with 1 million gold
+- Start 1000 small keys
+- Start with 1000 big keys
+- 10,000 bonus prize tickets
+- Super Strong Melee
+- Start with gear
+- Show Div Containers
 
 
 ### Instructions
@@ -88,13 +56,13 @@ If you would like to cheat in the game, those are available through the Ragatron
 
 ### Dependencies
 
-- [Qt 5.4](http://www.qt.io/) SDK. The tested versions are compiled using MinGW bundled with Qt.
+- [Qt 5.6](http://www.qt.io/) SDK. The tested versions are compiled using MinGW bundled with Qt.
 
-- [QuaZIP](http://quazip.sourceforge.net/) is licensed LGPL v2 and is now statically built from within the project. There is no need to download.
+- QuaZIP has been removed. It is not needed for these games. 
 
 ### Expanding the Cheats
 
-Ragatron scans its run-time directory for `*.xml` files. If it doesn't find any, it will load in its internal xml files. Take a look at `wizardlizard.xml` and `lavablade.xml` under `ragatron/cheats` inside this project for guidance to add your own.
+Ragatron scans its run-time directory for `*.xml` files. If it doesn't find any, it will load in its internal xml files. Take a look at `wizardlizard.xml` under `ragatron/cheats` inside this project for guidance to add your own.
 
 
 Example hack from the Wizard Lizard XML:
@@ -123,9 +91,7 @@ Explanation:
 
 
 ### Todo
-
 - Expand to support more games
-- Auto-detect the HTML5 binary joins (currently hard-coded).
 - This project is currently accepting pull requests of XML expansions.  
 
 
@@ -136,4 +102,4 @@ GPL v2 or later
 
 
 ### Author
-&copy; 2015 Dan Nagle -  [@NagleCode](http://twitter.com/NagleCode) - [DanNagle.com](http://DanNagle.com)
+&copy; 2017 Dan Nagle -  [@NagleCode](http://twitter.com/NagleCode) - [DanNagle.com](http://DanNagle.com)

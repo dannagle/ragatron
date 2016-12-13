@@ -70,6 +70,7 @@ private slots:
     void on_lostcastButton_clicked();
 
     void gotoLDG();
+    void gotoPatreon();
 private:
     Ui::MainWindow *ui;
 };

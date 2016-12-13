@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
     int reply = QMessageBox::question(this, "This tool violates Steam's ToS"
-         , "This tool violates Steam's ToS. \n\nThough Lost Decade Games said they'll ignore this (for now), Steam might not.\n\n\nDo you feel lucky?",
+         , "This tool violates Steam's ToS. \n\nThough Lost Decade Games said they'll ignore Ragatron (for now), Steam might not.\n\n\nDo you feel lucky?",
                                 QMessageBox::Yes|QMessageBox::No);
     if (reply == QMessageBox::No) {
         QDEBUG() <<"Quitting";
@@ -82,10 +82,10 @@ MainWindow::MainWindow(QWidget *parent) :
     statusBar()->show();
 
     QDate vDate = QDate::fromString(QString(__DATE__).simplified(), "MMM d yyyy");
-    statusBarMessage("Version " + vDate.toString("yyyy-MM-dd"));
+    statusBarMessage("B:" + vDate.toString("yyyy-MM-dd"));
 
 
-    setWindowTitle("Ragatron: Hacking HTML5 Games");
+    setWindowTitle("Ragatron: Hacking Lost Decade Games");
 
     this->setWindowIcon(QIcon(RAGATRONLOGO));
 
@@ -102,6 +102,19 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(RagatronButton, SIGNAL(clicked()),
             this, SLOT(gotoRagatron()));
+
+
+
+
+    QPushButton * patreonButton = new QPushButton("LDG Patreon");
+    patreonButton->setStyleSheet("QPushButton { color: black; } QPushButton::hover { color: #BC810C; } ");
+    patreonButton->setFlat(true);
+    patreonButton->setCursor(Qt::PointingHandCursor);
+    patreonButton->setIcon(QIcon("://patreon_logo.png"));
+
+    connect(patreonButton, SIGNAL(clicked()),
+            this, SLOT(gotoPatreon()));
+
 
     QPushButton * nagleCodeButton = new QPushButton("@NagleCode");
     nagleCodeButton->setStyleSheet("QPushButton { color: black; } QPushButton::hover { color: #BC810C; } ");
@@ -134,6 +147,7 @@ MainWindow::MainWindow(QWidget *parent) :
     statusBar()->insertPermanentWidget(1, nagleCodeButton);
     statusBar()->insertPermanentWidget(2, githubButton);
     statusBar()->insertPermanentWidget(3, ldgButton);
+    statusBar()->insertPermanentWidget(4, patreonButton);
 
 
     QDir mdir;
@@ -411,6 +425,14 @@ void MainWindow::gotoGithub()
 
     //Open URL in browser
     QDesktopServices::openUrl(QUrl("https://github.com/dannagle/ragatron"));
+
+}
+
+void MainWindow::gotoPatreon()
+{
+
+    //Open URL in browser
+    QDesktopServices::openUrl(QUrl("https://www.patreon.com/lostdecadegames"));
 
 }
 
