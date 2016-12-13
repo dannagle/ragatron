@@ -12,7 +12,7 @@ Ragatron is not officially supported by Lost Decade Games. However, *you* can of
 
 Ragatron can be downloaded at  [Ragatron.com](http://ragatron.com/)
 
-![Ragatron UI](githubscreenshots/ragatron_ui.png)
+![Ragatron UI](githubscreenshots/ragatronui.png)
 
 
 ## Built-in Hacks for A Wizard's Lizard
