@@ -38,15 +38,16 @@
     <replace>,price:14,editEntity:"pulseButton"</replace>
 </hack>
 
+
 <hack>
 <category>Store Tiles</category>
     <platform>all</platform>
-    <id>igsBossBlockCheap</id>
-    <name>Boss Block is cheap.</name>
+    <id>igsBeaconCheap</id>
+    <name>Beacon is cheap.</name>
     <mactarget>Contents/Resources/app.nw/game.js</mactarget>
     <wintarget>package.nw/game.js</wintarget>
-    <search>,price:15e3,editEntity:"bossBlock"</search>
-    <replace>,price:153,editEntity:"bossBlock"</replace>
+    <search>,price:1e4,editEntity:"pulseButton"</search>
+    <replace>,price:14,editEntity:"pulseButton"</replace>
 </hack>
 
 
@@ -266,6 +267,32 @@
     <search>,price:25e3,flag:"backgroundColor"}</search>
     <replace>,price:23,flag:"backgroundColor"}</replace>
 </hack>
+
+
+
+<hack>
+<category>Mechanics</category>
+    <platform>all</platform>
+    <id>igsSensitiveJumpCheap</id>
+    <name>Sensitive Jump is cheap.</name>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
+    <search>,price:1e4,editEntity:"jumpPickup"</search>
+    <replace>,price:14,editEntity:"jumpPickup"</replace>
+</hack>
+
+
+<hack>
+<category>Mechanics</category>
+    <platform>all</platform>
+    <id>igsHigherJump</id>
+    <name>Jump Higher</name>
+    <mactarget>Contents/Resources/app.nw/game.js</mactarget>
+    <wintarget>package.nw/game.js</wintarget>
+    <search>return e.jump.request=!0,e.jump.power=-0.225</search>
+    <replace>return e.jump.request=!0,e.jump.power=-0.5</replace>
+</hack>
+
 
 
     <hack>
