@@ -60,7 +60,7 @@ If you would like to cheat in the game, those are available through the Ragatron
 
 ### Dependencies
 
-- [Qt 5.6](http://www.qt.io/) SDK. The tested versions are compiled using MinGW bundled with Qt.
+- [Qt 5.7](http://www.qt.io/) SDK. The tested versions are compiled using MinGW bundled with Qt.
 
 - QuaZIP has been removed. It is not needed for these games.
 
