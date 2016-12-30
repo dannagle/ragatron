@@ -330,10 +330,10 @@ bool HTML5Game::repack()
 
             QString otherFileString(otherFiles[otherFilesPath]);
             otherFileString.replace(gameHack.search, gameHack.replace);
-            otherFiles[otherFilesPath] = otherFileString.toLatin1();
+            otherFiles[otherFilesPath] = otherFileString.toUtf8();
             QFile otherFile(otherFilesPath);
             if(otherFile.open(QIODevice::WriteOnly)) {
-                otherFile.write(otherFileString.toLatin1());
+                otherFile.write(otherFileString.toUtf8());
                 otherFile.close();
             } else {
                 QDEBUG() << "failed to open File!" << unpackPath + "/" + gameHack.target;
