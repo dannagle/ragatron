@@ -33,6 +33,7 @@ Ragatron can be downloaded at  [Ragatron.com](http://ragatron.com/)
 ## Built-in Hacks for Indie Game Sim
 - All the items in the store are cheaper
 - Publishing games is cheaper
+- Jump higher
 
 
 
