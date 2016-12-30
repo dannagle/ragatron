@@ -3,6 +3,9 @@
 Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's Lizard](http://www.wizardslizard.com), [Indie Game Sim](http://www.indiegamesim.com), and [Soul Thief](http://www.wizardslizard.com) developed by [Lost Decade Games](http://www.lostdecadegames.com). It is available for Windows and (Intel-based) Mac. The only targeted versions are the currently shipping versions purchased from Steam.
 
 ![AWL hack screenshot](githubscreenshots/hacked_awl_crop.jpg)
+![IGS hack screenshot](githubscreenshots/igs_own_all.png)
+![Soul Thief hack screenshot](githubscreenshots/soulthief.png)
+
 
 Ragatron is not officially supported by Lost Decade Games. However, *you* can officially support indie game developers by purchasing (multiple!) copies of their games to hack with this tool! ;-)
 
