@@ -122,6 +122,12 @@ MainWindow::MainWindow(QWidget *parent) :
     nagleCodeButton->setCursor(Qt::PointingHandCursor);
     nagleCodeButton->setIcon(QIcon("://Twitter_logo_blue.png"));
 
+
+    connect(nagleCodeButton, SIGNAL(clicked()),
+            this, SLOT(gotoDanNagleTwitter()));
+
+
+
     QPushButton * githubButton = new QPushButton("GitHub");
     githubButton->setStyleSheet("QPushButton { color: black; } QPushButton::hover { color: #BC810C; } ");
     githubButton->setFlat(true);
