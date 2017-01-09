@@ -7,9 +7,8 @@ Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's 
 ![Soul Thief hack screenshot](githubscreenshots/soulthief.png)
 
 
-Ragatron is not officially supported by Lost Decade Games. However, *you* can officially support indie game developers by purchasing (multiple!) copies of their games to hack with this tool! ;-)
+Lost Decade Games has tweeted their blessing to use this tool on their games, but Ragatron is not officially supported by them. Use at your own risk. However, *you* can officially support indie game developers by purchasing (multiple!) copies of their games to hack with this tool! ;-)
 
-** Note that using this tool violates Steam's ToS! **
 
 ## Download
 
