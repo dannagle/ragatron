@@ -108,7 +108,9 @@ Explanation:
 
 ### License
 
-GPL v2 or later
+Ragatron source code is now LGPL v2. 
+
+Previous published versions were GPL v2.
 
 
 ### Author
