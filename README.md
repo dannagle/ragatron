@@ -1,6 +1,6 @@
 ## This project has been abandoned until LDG releases Lava Blade 2! 
 
-[Tell LDG](https://twitter.com/LostDecadeGames) the world needs a new Lava Blade! When LDG releases a worthy successor, I'll update Ragatron to support it!
+[Tell LDG](https://twitter.com/LostDecadeGames) the world needs a new [Lava Blade](http://www.lavablade.com/)! When LDG releases a worthy successor, I'll update Ragatron to support it!
 
 ![Lava Blade Tweet](githubscreenshots/lavablade_tweet.png)
 
