@@ -1,6 +1,13 @@
+## This project has been abandoned until LDG releases Lava Blade 2! 
+
+[Tell LDG](https://twitter.com/LostDecadeGames) the world needs a new Lava Blade! When LDG releases a worthy successor, I'll update Ragatron to support it!
+
+![Lava Blade Tweet](githubscreenshots/lavablade_tweet.png)
+
+
 # Ragatron
 
-Ragatron is an open source hacking tool for HTML5 games. It targets [A Wizard's Lizard](http://www.wizardslizard.com), [Indie Game Sim](http://www.indiegamesim.com), and [Soul Thief](http://www.wizardslizard.com) developed by [Lost Decade Games](http://www.lostdecadegames.com). It is available for Windows and (Intel-based) Mac. The only targeted versions are the currently shipping versions purchased from Steam.
+Ragatron is (or was) an open source hacking tool for HTML5 games. It targets [A Wizard's Lizard](http://www.wizardslizard.com), [Indie Game Sim](http://www.indiegamesim.com), and [Soul Thief](http://www.wizardslizard.com) developed by [Lost Decade Games](http://www.lostdecadegames.com). It is available for Windows and (Intel-based) Mac. The only targeted versions are the currently shipping versions purchased from Steam.
 
 ![AWL hack screenshot](githubscreenshots/hacked_awl_crop.jpg)
 ![IGS hack screenshot](githubscreenshots/igs_own_all.png)
